@@ -25,7 +25,7 @@ export default function Home() {
       'Python','C++','SQL','JavaScript','HTML','CSS'
     ],
     'Languages': [
-      'Turkish (Native)', 'English (C1)', 'German (A1)'
+      'Turkish (Native)', 'English (C1)','Arabic (A2)','German (A1)'
     ]
   };
 
