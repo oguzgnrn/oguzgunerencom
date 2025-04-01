@@ -21,7 +21,7 @@ export default function Home() {
       'Jupyter Notebooks', 'VS Studio', 'Apache NiFi', 'Airflow',
       'SQL', 'Firebase','Replit','Cursor'
     ],
-    'ProgrammingLanguages': [
+    'Programming Languages': [
       'Python','C++','SQL','JavaScript','HTML','CSS'
     ],
     'Languages': [

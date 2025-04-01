@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -63,6 +64,7 @@ export default function RootLayout({
             <p className="text-black">&copy; {new Date().getFullYear()} Oğuz Güneren. All rights reserved.</p>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   )
