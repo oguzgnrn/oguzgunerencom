@@ -65,15 +65,15 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-[#E7E4DA] p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-[#004225] mb-2">Istanbul Technical University</h3>
-            <p className="text-black mb-1">Artificial Intelligence and Data Engineering</p>
+            <p className="text-black mb-1">BSc,Artificial Intelligence and Data Engineering</p>
             <p className="text-sm text-black mb-2">2024 - Present</p>
             <ul className="list-disc list-inside text-sm text-black">
-              <li>2.88/4 GPA</li>
+              <li>2.72/4 GPA</li>
             </ul>
           </div>
           <div className="bg-[#E7E4DA] p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-[#004225] mb-2">Bahcesehir University</h3>
-            <p className="text-black mb-1">Artificial Intelligence Engineering</p>
+            <p className="text-black mb-1">BSc,Artificial Intelligence Engineering</p>
             <p className="text-sm text-black mb-2">2021 - 2024</p>
             <ul className="list-disc list-inside text-sm text-black">
               <li>3.25/4 GPA with Honor Degree</li>
