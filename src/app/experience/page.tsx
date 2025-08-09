@@ -6,7 +6,7 @@ export default function Experience() {
       title: "Artificial Intelligence Intern",
       company: "TÜBİTAK BİLGEM",
       location: "Full Time - Office",
-      period: "Aug 2025 - Sept 2025",
+      period: "Aug 2025 - Sept 2025 • 2 month",
       responsibilities: [
         "Deep Learning"
       ],
@@ -16,7 +16,7 @@ export default function Experience() {
       title: "Artificial Intelligence Intern",
       company: "Cezeri Artificial Intelligence and Robotic Technologies",
       location: "Full Time - Office",
-      period: "Jun 2025 - Aug 2025",
+      period: "Jun 2025 - Aug 2025 • 3 month",
       responsibilities: [
         "Computer Vision",
         "VLMs",
@@ -28,7 +28,7 @@ export default function Experience() {
       title: "Data Scientist",
       company: "Seller Integral",
       location: "Part Time - Remote",
-      period: "Sep 2023 - Feb 2025",
+      period: "Sep 2023 - Feb 2025 • 1 years 6 month",
       responsibilities: [
         "Specialize in transforming extensive raw datasets into valuable insights using tools like Pandas and NumPy",
         "Proficient in data analysis, enhancement and manipulation with expertise in understanding complex data structures",
@@ -42,7 +42,7 @@ export default function Experience() {
       title: "Data Scientist",
       company: "Maestrozon",
       location: "Part Time - Hybrid",
-      period: "Jul 2024 - Aug 2024",
+      period: "Jul 2024 - Aug 2024 • 3 month",
       responsibilities: [
         "Developed tools to simplify data collection and organization for Amazon sellers",
         "Designed user-friendly applications to make processes accessible for non-technical users",
@@ -54,7 +54,7 @@ export default function Experience() {
       title: "Data Scientist",
       company: "Schneider Electric",
       location: "Part Time - Hybrid",
-      period: "May 2024 - Jul 2024",
+      period: "May 2024 - Jul 2024 • 3 month",
       responsibilities: [
         "Specialize in using Python for advanced data visualization and manipulation tasks",
         "Leverage tools like PowerAutomate and PowerBI for seamless data integration and reporting",
@@ -67,7 +67,7 @@ export default function Experience() {
       title: "Computer Vision Engineer",
       company: "Overtech Information Technologies Inc.",
       location: "Part Time - Hybrid",
-      period: "Oct 2022 - May 2023",
+      period: "Oct 2022 - May 2023 • 8 month",
       responsibilities: [
         "Worked with a 100-class dataset for a TUBITAK project on image recognition and deep learning",
         "Prepared and labeled datasets and applied image preprocessing methods like histogram equalization",
@@ -81,7 +81,7 @@ export default function Experience() {
       title: "Junior Data Scientist",
       company: "Overtech Information Technologies Inc.",
       location: "Full Time - Office",
-      period: "May 2022 - Oct 2022",
+      period: "May 2022 - Oct 2022 • 6 month",
       responsibilities: [
         "Performed web scraping using BeautifulSoup and Selenium",
         "Learned SQL to manage the acquired data",
@@ -95,7 +95,7 @@ export default function Experience() {
       title: "Data Scientist Intern",
       company: "Overtech Information Technologies Inc.",
       location: "Full Time - Office",
-      period: "Feb 2022 - May 2022",
+      period: "Feb 2022 - May 2022 • 4 month",
       responsibilities: [
         "Data Analysis",
         "Web Scraping",

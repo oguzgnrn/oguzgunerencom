@@ -48,13 +48,11 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-[#004225]">About Me</h2>
         <div className="prose prose-lg text-black bg-[#E7E4DA] p-6 rounded-lg">
           <p>
-          As a Data Scientist with a solid background in Artificial Intelligence Engineering, I have worked on a range of AI projects spanning data analysis, computer vision, and automation. My experience includes developing deep learning models, designing and training neural networks, optimizing algorithms, and applying AI to real-world problems across various domains. I have also worked on data preprocessing, feature engineering, and model deployment, ensuring AI solutions are both effective and scalable.
-
+          As a Data Scientist with nearly 4 years of industry experience and a solid background in Artificial Intelligence Engineering, I have worked on a range of AI projects spanning data analysis, computer vision, and automation. My experience includes developing deep learning models, designing and training neural networks, optimizing algorithms, and applying AI to real-world problems across various domains. I have also been involved in the complete machine learning lifecycle, including data preprocessing, advanced feature engineering, model optimization, and production deployment, ensuring that AI solutions maintain high performance, reliability, and scalability.
           </p> 
           <br></br>
           <p>
-          Now, as a student actively working in the field, I stay up to date with the rapidly evolving AI landscape and continuously explore new applications. I work on multiple AI-driven projects, focusing on integrating intelligent systems into different areas to improve efficiency, decision-making, and automation.
-
+          Currently, as a student actively working in the field, I stay up to date with the rapidly evolving AI landscape and continuously explore new applications. I work on multiple AI-driven projects, focusing on integrating intelligent systems into different areas to improve efficiency, decision-making, and automation.
           </p>
         </div>
       </section>
