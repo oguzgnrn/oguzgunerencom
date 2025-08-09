@@ -13,12 +13,14 @@
 
 @layer base {
   body {
-    @apply bg-background text-secondary;
+    background-color: #F5F5DC;
+    color: #1A1A1A;
     font-family: 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold text-primary;
+    @apply font-semibold;
+    color: #004225;
   }
 }
 
@@ -28,11 +30,17 @@
   }
 
   .nav-link {
-    @apply px-4 py-2 text-neutral hover:text-primary transition-colors duration-200;
+    @apply px-4 py-2 transition-colors duration-200;
+    color: #4A4A4A;
+  }
+
+  .nav-link:hover {
+    color: #004225;
   }
 
   .nav-link.active {
-    @apply text-primary font-medium;
+    @apply font-medium;
+    color: #004225;
   }
 
   .section {
@@ -40,15 +48,27 @@
   }
 
   .card {
-    @apply bg-light bg-opacity-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-200;
+    @apply rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-200;
+    background-color: rgba(232, 232, 232, 0.5);
   }
 
   .button {
-    @apply px-6 py-2 rounded-md bg-primary text-light hover:bg-accent transition-colors duration-200;
+    @apply px-6 py-2 rounded-md transition-colors duration-200;
+    background-color: #004225;
+    color: #E8E8E8;
+  }
+
+  .button:hover {
+    background-color: #2C5530;
   }
 
   .link {
-    @apply text-primary hover:text-accent underline-offset-4 hover:underline transition-colors duration-200;
+    @apply underline-offset-4 hover:underline transition-colors duration-200;
+    color: #004225;
+  }
+
+  .link:hover {
+    color: #2C5530;
   }
 }
 
@@ -58,13 +78,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-background;
+  background-color: #F5F5DC;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary bg-opacity-50 rounded-full;
+  background-color: rgba(0, 66, 37, 0.5);
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary bg-opacity-70;
+  background-color: rgba(0, 66, 37, 0.7);
 }
