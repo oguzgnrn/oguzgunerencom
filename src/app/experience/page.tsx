@@ -3,14 +3,14 @@ import React from 'react';
 export default function Experience() {
   const experiences = [
     {
-      title: "Artificial Intelligence Intern",
+      title: "Data Engineering Intern",
       company: "TÜBİTAK BİLGEM",
       location: "Full Time - Office",
       period: "Aug 2025 - Sept 2025 • 2 month",
       responsibilities: [
-        "Deep Learning"
+        "B3LAB - Cloud Computing and Big Data Research Laboratory - b3lab.org"
       ],
-      skills: ["Deep Learning"]
+      skills: ["Big Data","Data Analysis","Data Engineering","Data Science"]
     },
     {
       title: "Artificial Intelligence Intern",
