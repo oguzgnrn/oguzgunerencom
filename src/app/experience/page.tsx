@@ -7,6 +7,9 @@ export default function Experience() {
       company: "Turkish Airlines Technology",
       location: "Part Time - Hybrid",
       period: "Nov 2025 - Present",
+      responsibilities: [
+        "www.turkishtechnology.com"
+      ],
       skills: ["Big Data","Data Analysis","Data Science"]
     },
     {
