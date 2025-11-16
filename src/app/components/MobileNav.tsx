@@ -39,7 +39,8 @@ export default function MobileNav() {
               <Link
                 href="/"
                 onClick={closeMenu}
-                className="text-white font-medium hover:text-[#FFFDD0] transition-colors py-2 px-4 rounded-md hover:bg-[#004225]"
+                className="!text-white font-medium hover:text-[#FFFDD0] transition-colors py-2 px-4 rounded-md hover:bg-[#004225]"
+                style={{ color: '#ffffff' }}
               >
                 About
               </Link>
