@@ -53,46 +53,46 @@ export default function Projects() {
   ];
 
   return (
-    <div className="space-y-12">
-      <h1 className="text-4xl font-bold text-[#004225]">Projects</h1>
-      <div className="space-y-16">
+    <div className="space-y-6 sm:space-y-8 md:space-y-12">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#004225]">Projects</h1>
+      <div className="space-y-8 sm:space-y-12 md:space-y-16">
         {projects.map((project, index) => (
-          <div key={index} className="bg-[#E7E4DA] p-6 rounded-lg hover:scale-[1.01] transform transition-transform">
-            <div className="flex justify-between items-start mb-4">
-              <div>
-                <h2 className="text-2xl font-semibold text-[#004225]">
+          <div key={index} className="bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg hover:scale-[1.01] transform transition-transform">
+            <div className="flex justify-between items-start mb-3 sm:mb-4 gap-3">
+              <div className="flex-1 min-w-0">
+                <h2 className="text-xl sm:text-2xl font-semibold text-[#004225] mb-1 sm:mb-2">
                   {project.title}
-                  {project.subtitle && <span className="text-lg ml-2">({project.subtitle})</span>}
+                  {project.subtitle && <span className="text-base sm:text-lg ml-1 sm:ml-2">({project.subtitle})</span>}
                 </h2>
-                <p className="text-black">{project.date}</p>
+                <p className="text-sm sm:text-base text-black">{project.date}</p>
               </div>
               <a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#004225] hover:text-[#08591C] transition-colors"
+                className="text-[#004225] hover:text-[#08591C] transition-colors flex-shrink-0"
               >
-                <FaGithub size={24} />
+                <FaGithub size={20} className="sm:w-6 sm:h-6" />
               </a>
             </div>
 
-            <div className="space-y-4 mb-6">
-              <ul className="list-disc list-inside space-y-2">
+            <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+              <ul className="list-disc list-inside space-y-1 sm:space-y-2">
                 {project.highlights.map((highlight, idx) => (
-                  <li key={idx} className="text-black">{highlight}</li>
+                  <li key={idx} className="text-sm sm:text-base text-black leading-relaxed">{highlight}</li>
                 ))}
               </ul>
             </div>
 
-            <p className="text-black mb-6 text-justify">{project.description}</p>
+            <p className="text-sm sm:text-base text-black mb-4 sm:mb-6 text-justify leading-relaxed">{project.description}</p>
 
-            <div className="space-y-3">
+            <div className="space-y-2 sm:space-y-3">
               {Object.entries(project.skills).map(([category, skills]) => (
                 <div key={category} className="flex flex-wrap gap-2">
                   {skills.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-sm font-medium"
+                      className="px-2 sm:px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-xs sm:text-sm font-medium"
                     >
                       {skill}
                     </span>
