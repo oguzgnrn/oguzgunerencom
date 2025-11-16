@@ -158,27 +158,27 @@ export default function Certifications() {
   ];
 
   return (
-    <div className="space-y-12">
-      <h1 className="text-4xl font-bold text-[#004225]">Certifications & Courses</h1>
+    <div className="space-y-6 sm:space-y-8 md:space-y-12">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#004225]">Certifications & Courses</h1>
       
-      <div className="space-y-12">
+      <div className="space-y-6 sm:space-y-8 md:space-y-12">
  
 
         <div>
-          <h2 className="text-2xl font-semibold text-[#004225] mb-6">Professional Courses & Achievements</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <h2 className="text-xl sm:text-2xl font-semibold text-[#004225] mb-4 sm:mb-6">Professional Courses & Achievements</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             {achievements.map((achievement, index) => (
-              <div key={index} className="bg-[#E7E4DA] p-6 rounded-lg hover:scale-[1.02] transform transition-transform">
-                <h3 className="text-xl font-semibold text-[#004225] mb-2">{achievement.title}</h3>
-                <p className="text-black mb-2">{achievement.organization}</p>
-                <p className="text-sm text-black mb-2">{achievement.date}</p>
+              <div key={index} className="bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg hover:scale-[1.02] transform transition-transform">
+                <h3 className="text-lg sm:text-xl font-semibold text-[#004225] mb-2">{achievement.title}</h3>
+                <p className="text-sm sm:text-base text-black mb-1 sm:mb-2">{achievement.organization || achievement.issuer || achievement.platform}</p>
+                <p className="text-xs sm:text-sm text-black mb-1 sm:mb-2">{achievement.date}</p>
                 {achievement.credential && (
-                  <p className="text-sm text-[#08591C] mb-3">{achievement.credential}</p>
+                  <p className="text-xs sm:text-sm text-[#08591C] mb-2 sm:mb-3 break-all">{achievement.credential}</p>
                 )}
                 {achievement.skills && (
                   <div className="flex flex-wrap gap-2">
                     {achievement.skills.map((skill, idx) => (
-                      <span key={idx} className="px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-sm">
+                      <span key={idx} className="px-2 sm:px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-xs sm:text-sm">
                         {skill}
                       </span>
                     ))}
