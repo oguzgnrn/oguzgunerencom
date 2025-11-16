@@ -117,37 +117,37 @@ export default function Experience() {
   ];
 
   return (
-    <div className="space-y-12">
-      <h1 className="text-4xl font-bold text-[#004225]">Experience</h1>
-      <div className="space-y-12">
+    <div className="space-y-6 sm:space-y-8 md:space-y-12">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#004225]">Experience</h1>
+      <div className="space-y-6 sm:space-y-8 md:space-y-12">
         {experiences.map((experience, index) => (
-          <div key={index} className="bg-[#E7E4DA] p-6 rounded-lg hover:scale-[1.01] transform transition-transform">
-            <div className="flex flex-col md:flex-row justify-between mb-4">
-              <div>
-                <h2 className="text-2xl font-semibold text-[#004225]">{experience.title}</h2>
-                <div className="text-black">
+          <div key={index} className="bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg hover:scale-[1.01] transform transition-transform">
+            <div className="flex flex-col md:flex-row justify-between mb-3 sm:mb-4">
+              <div className="flex-1">
+                <h2 className="text-xl sm:text-2xl font-semibold text-[#004225] mb-1 sm:mb-2">{experience.title}</h2>
+                <div className="text-sm sm:text-base text-black">
                   <span className="font-medium">{experience.company}</span>
-                  <span className="mx-2">•</span>
-                  <span>{experience.location}</span>
+                  <span className="mx-1 sm:mx-2">•</span>
+                  <span className="break-words">{experience.location}</span>
                 </div>
               </div>
-              <div className="text-black mt-2 md:mt-0 md:text-right">
+              <div className="text-sm sm:text-base text-black mt-2 md:mt-0 md:text-right">
                 {experience.period}
               </div>
             </div>
 
-            <div className="space-y-4">
-              <ul className="list-disc list-inside space-y-2">
+            <div className="space-y-3 sm:space-y-4">
+              <ul className="list-disc list-inside space-y-1 sm:space-y-2">
                 {experience.responsibilities.map((responsibility, idx) => (
-                  <li key={idx} className="text-black">{responsibility}</li>
+                  <li key={idx} className="text-sm sm:text-base text-black leading-relaxed">{responsibility}</li>
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-2 mt-4">
+              <div className="flex flex-wrap gap-2 mt-3 sm:mt-4">
                 {experience.skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-sm font-medium"
+                    className="px-2 sm:px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-xs sm:text-sm font-medium"
                   >
                     {skill}
                   </span>
