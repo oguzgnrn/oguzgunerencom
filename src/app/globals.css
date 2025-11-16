@@ -97,3 +97,21 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 66, 37, 0.7);
 }
+
+/* Mobile Navigation Links - Force white color */
+.mobile-nav-menu a,
+.mobile-nav-link {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+}
+
+.mobile-nav-menu a:hover,
+.mobile-nav-link:hover {
+  color: #FFFDD0 !important;
+  background-color: #004225 !important;
+}
+
