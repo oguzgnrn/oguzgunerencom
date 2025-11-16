@@ -16,11 +16,17 @@
     background-color: #F5F5DC;
     color: #1A1A1A;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold;
     color: #004225;
+    word-wrap: break-word;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 }
 
@@ -53,9 +59,11 @@
   }
 
   .button {
-    @apply px-6 py-2 rounded-md transition-colors duration-200;
+    @apply px-4 sm:px-6 py-2 rounded-md transition-colors duration-200;
     background-color: #004225;
     color: #E8E8E8;
+    white-space: nowrap;
+    text-align: center;
   }
 
   .button:hover {
