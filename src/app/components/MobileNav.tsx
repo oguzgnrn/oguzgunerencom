@@ -33,38 +33,37 @@ export default function MobileNav() {
       {/* Mobile menu overlay */}
       {isOpen && (
         <div className="fixed inset-0 z-40 md:hidden">
-          <div className="fixed inset-0 bg-black bg-opacity-50" onClick={closeMenu} />
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50"
+            onClick={closeMenu}
+          />
           <div className="fixed top-16 right-0 w-64 h-full bg-[#013220] shadow-lg z-50 mobile-nav-menu">
             <div className="flex flex-col p-4 space-y-4">
               <Link
                 href="/"
                 onClick={closeMenu}
-                className="mobile-nav-link"
-                style={{ color: '#ffffff', fontWeight: '500' }}
+                className="mobile-nav-link bg-[#013220]"
               >
                 About
               </Link>
               <Link
                 href="/experience"
                 onClick={closeMenu}
-                className="mobile-nav-link"
-                style={{ color: '#ffffff', fontWeight: '500' }}
+                className="mobile-nav-link bg-[#013220]"
               >
                 Experience
               </Link>
               <Link
                 href="/projects"
                 onClick={closeMenu}
-                className="mobile-nav-link"
-                style={{ color: '#ffffff', fontWeight: '500' }}
+                className="mobile-nav-link bg-[#013220]"
               >
                 Projects
               </Link>
               <Link
                 href="/certifications"
                 onClick={closeMenu}
-                className="mobile-nav-link"
-                style={{ color: '#ffffff', fontWeight: '500' }}
+                className="mobile-nav-link bg-[#013220]"
               >
                 Certifications
               </Link>
@@ -75,4 +74,3 @@ export default function MobileNav() {
     </>
   );
 }
-
