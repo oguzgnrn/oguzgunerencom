@@ -34,34 +34,37 @@ export default function MobileNav() {
       {isOpen && (
         <div className="fixed inset-0 z-40 md:hidden">
           <div className="fixed inset-0 bg-black bg-opacity-50" onClick={closeMenu} />
-          <div className="fixed top-16 right-0 w-64 h-full bg-[#013220] shadow-lg z-50">
+          <div className="fixed top-16 right-0 w-64 h-full bg-[#013220] shadow-lg z-50 mobile-nav-menu">
             <div className="flex flex-col p-4 space-y-4">
               <Link
                 href="/"
                 onClick={closeMenu}
-                className="!text-white font-medium hover:text-[#FFFDD0] transition-colors py-2 px-4 rounded-md hover:bg-[#004225]"
-                style={{ color: '#ffffff' }}
+                className="mobile-nav-link"
+                style={{ color: '#ffffff', fontWeight: '500' }}
               >
                 About
               </Link>
               <Link
                 href="/experience"
                 onClick={closeMenu}
-                className="text-white font-medium hover:text-[#FFFDD0] transition-colors py-2 px-4 rounded-md hover:bg-[#004225]"
+                className="mobile-nav-link"
+                style={{ color: '#ffffff', fontWeight: '500' }}
               >
                 Experience
               </Link>
               <Link
                 href="/projects"
                 onClick={closeMenu}
-                className="text-white font-medium hover:text-[#FFFDD0] transition-colors py-2 px-4 rounded-md hover:bg-[#004225]"
+                className="mobile-nav-link"
+                style={{ color: '#ffffff', fontWeight: '500' }}
               >
                 Projects
               </Link>
               <Link
                 href="/certifications"
                 onClick={closeMenu}
-                className="text-white font-medium hover:text-[#FFFDD0] transition-colors py-2 px-4 rounded-md hover:bg-[#004225]"
+                className="mobile-nav-link"
+                style={{ color: '#ffffff', fontWeight: '500' }}
               >
                 Certifications
               </Link>
