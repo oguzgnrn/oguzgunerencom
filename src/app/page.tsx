@@ -30,50 +30,50 @@ export default function Home() {
   };
 
   return (
-    <div className="space-y-16 px-4 md:px-0">
+    <div className="space-y-8 sm:space-y-12 md:space-y-16">
       {/* Hero Section */}
       <section className="relative">
-        <div className="absolute inset-0 bg-[#E7E4DA] rounded-3xl" />
-        <div className="relative px-8 py-12 md:py-16 rounded-3xl">
-          <div className="text-center space-y-4">
-            <h1 className="text-4xl md:text-6xl font-bold text-[#004225]">Oğuz Güneren</h1>
-            <p className="text-2xl text-black">Artificial Intelligence Engineer | Data Scientist</p>
+        <div className="absolute inset-0 bg-[#E7E4DA] rounded-2xl sm:rounded-3xl" />
+        <div className="relative px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 lg:py-16 rounded-2xl sm:rounded-3xl">
+          <div className="text-center space-y-3 sm:space-y-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#004225] leading-tight">Oğuz Güneren</h1>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-black px-2">Artificial Intelligence Engineer | Data Scientist</p>
           </div>
     
         </div>
       </section>
 
       {/* About Section */}
-      <section className="space-y-8">
-        <h2 className="text-3xl font-bold text-[#004225]">About Me</h2>
-        <div className="prose text-black bg-[#E7E4DA] p-4 md:p-6 rounded-lg">
-          <p>
+      <section className="space-y-4 sm:space-y-6 md:space-y-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#004225]">About Me</h2>
+        <div className="prose prose-sm sm:prose-base md:prose-lg text-black bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg max-w-none">
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed">
           As a Data Scientist with nearly 4 years of industry experience and a solid background in Artificial Intelligence Engineering, I have worked on a range of AI projects spanning data analysis, computer vision, and automation. My experience includes developing deep learning models, designing and training neural networks, optimizing algorithms, and applying AI to real-world problems across various domains. I have also been involved in the complete machine learning lifecycle, including data preprocessing, advanced feature engineering, model optimization, and production deployment, ensuring that AI solutions maintain high performance, reliability, and scalability.
           </p> 
           <br></br>
-          <p>
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed">
           Currently, as a student actively working in the field, I stay up to date with the rapidly evolving AI landscape and continuously explore new applications. I work on multiple AI-driven projects, focusing on integrating intelligent systems into different areas to improve efficiency, decision-making, and automation.
           </p>
         </div>
       </section>
       
       {/* Education Section */}
-      <section className="space-y-8">
-        <h2 className="text-3xl font-bold text-[#004225]">Education</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-[#E7E4DA] p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-[#004225] mb-2">Istanbul Technical University</h3>
-            <p className="text-black mb-1">BSc,Artificial Intelligence and Data Engineering</p>
-            <p className="text-sm text-black mb-2">2024 - Present</p>
-            <ul className="list-disc list-inside text-sm text-black">
+      <section className="space-y-4 sm:space-y-6 md:space-y-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#004225]">Education</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
+          <div className="bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg">
+            <h3 className="text-lg sm:text-xl font-semibold text-[#004225] mb-2">Istanbul Technical University</h3>
+            <p className="text-sm sm:text-base text-black mb-1">BSc,Artificial Intelligence and Data Engineering</p>
+            <p className="text-xs sm:text-sm text-black mb-2">2024 - Present</p>
+            <ul className="list-disc list-inside text-xs sm:text-sm text-black">
               <li>2.72/4 GPA</li>
             </ul>
           </div>
-          <div className="bg-[#E7E4DA] p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-[#004225] mb-2">Bahcesehir University</h3>
-            <p className="text-black mb-1">BSc,Artificial Intelligence Engineering</p>
-            <p className="text-sm text-black mb-2">2021 - 2024</p>
-            <ul className="list-disc list-inside text-sm text-black">
+          <div className="bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg">
+            <h3 className="text-lg sm:text-xl font-semibold text-[#004225] mb-2">Bahcesehir University</h3>
+            <p className="text-sm sm:text-base text-black mb-1">BSc,Artificial Intelligence Engineering</p>
+            <p className="text-xs sm:text-sm text-black mb-2">2021 - 2024</p>
+            <ul className="list-disc list-inside text-xs sm:text-sm text-black">
               <li>3.25/4 GPA with Honor Degree</li>
               <li>Full Scholarship</li>
               <li>Transferred to ITU</li>
@@ -83,17 +83,17 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section className="space-y-8">
-        <h2 className="text-3xl font-bold text-[#004225]">Technical Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="space-y-4 sm:space-y-6 md:space-y-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#004225]">Technical Skills</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {Object.entries(skills).map(([category, skillList]) => (
-            <div key={category} className="bg-[#E7E4DA] p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-[#004225] mb-4">{category}</h3>
+            <div key={category} className="bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg">
+              <h3 className="text-lg sm:text-xl font-semibold text-[#004225] mb-3 sm:mb-4">{category}</h3>
               <div className="flex flex-wrap gap-2">
                 {skillList.map((skill, index) => (
                   <span 
                     key={index} 
-                    className="px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-sm"
+                    className="px-2 sm:px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-xs sm:text-sm"
                   >
                     {skill}
                   </span>
@@ -105,28 +105,28 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="space-y-8">
-        <h2 className="text-3xl font-bold text-[#004225]">Get in Touch</h2>
-        <div className="bg-[#E7E4DA] p-6 rounded-lg">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <FaEnvelope className="text-[#004225] text-xl" />
-                <a href="mailto:gnrnoguz@gmail.com" className="text-black hover:text-[#004225]">
+      <section className="space-y-4 sm:space-y-6 md:space-y-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-[#004225]">Get in Touch</h2>
+        <div className="bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
+            <div className="space-y-3 sm:space-y-4">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <FaEnvelope className="text-[#004225] text-lg sm:text-xl flex-shrink-0" />
+                <a href="mailto:gnrnoguz@gmail.com" className="text-sm sm:text-base text-black hover:text-[#004225] break-all">
                   gnrnoguz@gmail.com
                 </a>
               </div>
-              <div className="flex items-center gap-3">
-                <FaPhone className="text-[#004225] text-xl" />
-                <span className="text-black">+90 551 126 23 26</span>
+              <div className="flex items-center gap-2 sm:gap-3">
+                <FaPhone className="text-[#004225] text-lg sm:text-xl flex-shrink-0" />
+                <span className="text-sm sm:text-base text-black">+90 551 126 23 26</span>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4">
               <a
                 href="https://github.com/oguzgnrn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button"
+                className="button text-sm sm:text-base px-4 sm:px-6 py-2 flex items-center justify-center"
               >
                 <FaGithub className="mr-2" /> GitHub
               </a>
@@ -134,7 +134,7 @@ export default function Home() {
                 href="https://medium.com/@gnrnoguz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button"
+                className="button text-sm sm:text-base px-4 sm:px-6 py-2 flex items-center justify-center"
               >
                 <FaMedium className="mr-2" /> Medium
               </a>
@@ -142,7 +142,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/oguzgnrn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button"
+                className="button text-sm sm:text-base px-4 sm:px-6 py-2 flex items-center justify-center"
               >
                 <FaLinkedin className="mr-2" /> LinkedIn
               </a>
