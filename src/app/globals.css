@@ -98,16 +98,18 @@
   background-color: rgba(0, 66, 37, 0.7);
 }
 
-/* Mobile Navigation Links - Force white color and background */
+/* Mobile Navigation Links - Force white color and consistent background */
 .mobile-nav-menu a,
 .mobile-nav-link {
   color: #ffffff !important;
   font-weight: 500 !important;
   display: block;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  transition: all 0.2s;
+  width: 100%;             /* tüm buton genişliği eşitlendi */
+  padding: 0.75rem 1rem;   /* tüm butonlarda aynı padding */
+  border-radius: 0.375rem; /* köşe yuvarlama eşitlendi */
+  text-align: center;      /* yazı ortalanacak */
   background-color: #013220 !important; /* panel ile aynı arka plan */
+  transition: all 0.2s;
 }
 
 .mobile-nav-menu a:hover,
@@ -115,3 +117,4 @@
   color: #FFFDD0 !important;
   background-color: #004225 !important;
 }
+
