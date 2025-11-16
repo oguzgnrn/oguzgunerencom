@@ -30,13 +30,13 @@ export default function Home() {
   };
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 px-4 md:px-0">
       {/* Hero Section */}
       <section className="relative">
         <div className="absolute inset-0 bg-[#E7E4DA] rounded-3xl" />
         <div className="relative px-8 py-12 md:py-16 rounded-3xl">
           <div className="text-center space-y-4">
-            <h1 className="text-6xl font-bold text-[#004225]">Oğuz Güneren</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-[#004225]">Oğuz Güneren</h1>
             <p className="text-2xl text-black">Artificial Intelligence Engineer | Data Scientist</p>
           </div>
     
@@ -46,7 +46,7 @@ export default function Home() {
       {/* About Section */}
       <section className="space-y-8">
         <h2 className="text-3xl font-bold text-[#004225]">About Me</h2>
-        <div className="prose prose-lg text-black bg-[#E7E4DA] p-6 rounded-lg">
+        <div className="prose text-black bg-[#E7E4DA] p-4 md:p-6 rounded-lg">
           <p>
           As a Data Scientist with nearly 4 years of industry experience and a solid background in Artificial Intelligence Engineering, I have worked on a range of AI projects spanning data analysis, computer vision, and automation. My experience includes developing deep learning models, designing and training neural networks, optimizing algorithms, and applying AI to real-world problems across various domains. I have also been involved in the complete machine learning lifecycle, including data preprocessing, advanced feature engineering, model optimization, and production deployment, ensuring that AI solutions maintain high performance, reliability, and scalability.
           </p> 
@@ -121,7 +121,7 @@ export default function Home() {
                 <span className="text-black">+90 551 126 23 26</span>
               </div>
             </div>
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="https://github.com/oguzgnrn"
                 target="_blank"
