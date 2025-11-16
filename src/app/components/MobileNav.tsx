@@ -42,28 +42,28 @@ export default function MobileNav() {
               <Link
                 href="/"
                 onClick={closeMenu}
-                className="mobile-nav-link bg-[#013220]"
+                className="mobile-nav-link"
               >
                 About
               </Link>
               <Link
                 href="/experience"
                 onClick={closeMenu}
-                className="mobile-nav-link bg-[#013220]"
+                className="mobile-nav-link"
               >
                 Experience
               </Link>
               <Link
                 href="/projects"
                 onClick={closeMenu}
-                className="mobile-nav-link bg-[#013220]"
+                className="mobile-nav-link"
               >
                 Projects
               </Link>
               <Link
                 href="/certifications"
                 onClick={closeMenu}
-                className="mobile-nav-link bg-[#013220]"
+                className="mobile-nav-link"
               >
                 Certifications
               </Link>
