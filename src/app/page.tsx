@@ -1,109 +1,32 @@
-import React from 'react';
 import { FaLinkedin, FaGithub, FaMedium, FaEnvelope, FaPhone } from 'react-icons/fa';
+import content from './cv-content.json';
+import { CvText, CvDownloads } from './components/CvContent';
 
 export default function Home() {
-  const skills = {
-    'Artificial Intelligence': [
-      'TensorFlow', 'PyTorch', 'Keras', 'Neural Networks (CNN, RNN, GANs) ', 
-      'Natural Language Processing (NLP)', 'Transformers', 'Reinforcement Learning', 
-      'Model Deployment', 'Parameter Tuning'
-    ],
-    'Data Science': [
-      'Python', 'R', 'SQL', 'Data Analysis', 'Data Visualization', 'Statistics', 
-        'Machine Learning Pipelines', 'Data Preprocessing', 'Cloud Platforms (AWS, Google Cloud, Azure)'
-    ],
-    'Computer Vision': [
-      'OpenCV', 'YOLO', 'Image Processing', 'Object Detection', 'Image Classification', 
-       'Optical Character Recognition (OCR)', 'Video Analysis', 'Image Augmentation','Face Recognition'
-    ],
-    'Tools & Technologies': [
-      'Docker', 'PowerBI', 'PowerAutomate', 'GitHub', 'Linux',
-      'Jupyter Notebooks', 'VS Studio', 'Apache NiFi', 'Airflow',
-      'SQL', 'Firebase','Replit','Cursor'
-    ],
-    'Programming Languages': [
-      'Python','C++','SQL','JavaScript','HTML','CSS'
-    ],
-    'Languages': [
-      'Turkish (Native)', 'English (C1)','Arabic (A2)','German (A1)'
-    ]
-  };
-
-  return (
-    <div className="space-y-8 sm:space-y-12 md:space-y-16">
-      {/* Hero Section */}
-      <section className="relative">
-        <div className="absolute inset-0 bg-[#E7E4DA] rounded-2xl sm:rounded-3xl" />
-        <div className="relative px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 lg:py-16 rounded-2xl sm:rounded-3xl">
-          <div className="text-center space-y-3 sm:space-y-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#004225] leading-tight">Oğuz Güneren</h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-black px-2">Artificial Intelligence Engineer | Data Scientist</p>
-          </div>
-    
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="space-y-4 sm:space-y-6 md:space-y-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#004225]">About Me</h2>
-        <div className="prose prose-sm sm:prose-base md:prose-lg text-black bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg max-w-none">
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-          As a Data Scientist with nearly 4 years of industry experience and a solid background in Artificial Intelligence Engineering, I have worked on a range of AI projects spanning data analysis, computer vision, and automation. My experience includes developing deep learning models, designing and training neural networks, optimizing algorithms, and applying AI to real-world problems across various domains. I have also been involved in the complete machine learning lifecycle, including data preprocessing, advanced feature engineering, model optimization, and production deployment, ensuring that AI solutions maintain high performance, reliability, and scalability.
-          </p> 
-          <br></br>
-          <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-          Currently, as a student actively working in the field, I stay up to date with the rapidly evolving AI landscape and continuously explore new applications. I work on multiple AI-driven projects, focusing on integrating intelligent systems into different areas to improve efficiency, decision-making, and automation.
-          </p>
-        </div>
-      </section>
-      
-      {/* Education Section */}
-      <section className="space-y-4 sm:space-y-6 md:space-y-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#004225]">Education</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
-          <div className="bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg">
-            <h3 className="text-lg sm:text-xl font-semibold text-[#004225] mb-2">Istanbul Technical University</h3>
-            <p className="text-sm sm:text-base text-black mb-1">BSc,Artificial Intelligence and Data Engineering</p>
-            <p className="text-xs sm:text-sm text-black mb-2">2024 - Present</p>
-            <ul className="list-disc list-inside text-xs sm:text-sm text-black">
-              <li>2.72/4 GPA</li>
-            </ul>
-          </div>
-          <div className="bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg">
-            <h3 className="text-lg sm:text-xl font-semibold text-[#004225] mb-2">Bahcesehir University</h3>
-            <p className="text-sm sm:text-base text-black mb-1">BSc,Artificial Intelligence Engineering</p>
-            <p className="text-xs sm:text-sm text-black mb-2">2021 - 2024</p>
-            <ul className="list-disc list-inside text-xs sm:text-sm text-black">
-              <li>3.25/4 GPA with Honor Degree</li>
-              <li>Full Scholarship</li>
-              <li>Transferred to ITU</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section className="space-y-4 sm:space-y-6 md:space-y-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#004225]">Technical Skills</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
-          {Object.entries(skills).map(([category, skillList]) => (
-            <div key={category} className="bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg">
-              <h3 className="text-lg sm:text-xl font-semibold text-[#004225] mb-3 sm:mb-4">{category}</h3>
-              <div className="flex flex-wrap gap-2">
-                {skillList.map((skill, index) => (
-                  <span 
-                    key={index} 
-                    className="px-2 sm:px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-xs sm:text-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
+  return <div className="space-y-10 sm:space-y-14">
+    <section className="bg-[#E7E4DA] px-5 py-10 sm:py-16 rounded-2xl text-center">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">{content.name}</h1>
+      <p className="text-lg sm:text-2xl mt-4">{content.title}</p>
+      <CvDownloads />
+    </section>
+    <section className="space-y-5">
+      <h2 className="text-2xl sm:text-3xl font-bold">About</h2>
+      <div className="bg-[#E7E4DA] p-5 sm:p-8 rounded-xl"><CvText text={content.about} /></div>
+    </section>
+    <section className="space-y-5">
+      <h2 className="text-2xl sm:text-3xl font-bold">EDUCATION</h2>
+      <div className="bg-[#E7E4DA] p-5 sm:p-8 rounded-xl"><CvText text={content.education} /></div>
+    </section>
+    <section className="space-y-5">
+      <h2 className="text-2xl sm:text-3xl font-bold">TECHNICAL SKILLS</h2>
+      <div className="grid gap-4 md:grid-cols-2">{content.skills.split('\n').filter(Boolean).map((line, i) => {
+        const colon = line.indexOf(':');
+        return <div key={i} className="bg-[#E7E4DA] p-5 sm:p-6 rounded-xl">
+          <h3 className="text-lg font-semibold mb-3">{line.slice(0, colon)}:</h3>
+          <p className="text-sm sm:text-base leading-relaxed">{line.slice(colon + 1)}</p>
+        </div>;
+      })}</div>
+    </section>
       {/* Contact Section */}
       <section className="space-y-4 sm:space-y-6 md:space-y-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#004225]">Get in Touch</h2>
@@ -150,6 +73,5 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
-  );
+  </div>;
 }

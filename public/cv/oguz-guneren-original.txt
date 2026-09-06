@@ -1,0 +1,137 @@
+Oğuz Güneren
+Artificial Intelligence Engineer | Data Scientist
+
+About
+
+I am a Data Scientist and AI Engineer with over four years of experience. At Turkish Technology (Turkish Airlines), my work covers production data pipelines, machine learning models, and explainable AI workflows built on large-scale data. Alongside this, I am completing my B.Sc. in Artificial Intelligence and Data Engineering at Istanbul Technical University. Earlier roles include computer vision and embedded systems at Baykar's Cezeri AI & Robotics, and time-series research at TÜBİTAK BİLGEM.
+
+Beyond my professional work, I build products from start to finish. SPOT is an AI system that turns full basketball games into automatic stats, shot maps, and highlight clips, built end to end: vision models, custom algorithms, GPU infrastructure, and the web application. EComGen, a generative AI platform for e-commerce sellers, followed the same path. What I enjoy most is building AI systems that hold up in production, tested against real data, efficient, and reliable for the people using them.
+
+
+
+
+
+AI Engineer & Founding Partner — SPOT  May 2026 – Present · Amsterdam / Remote · Sports Video Analytics · DEMO: https://youtube.com/watch?v=W4eGxCQr0tk
+* Built and shipped a production-grade AI video analytics platform end-to-end, owning the full ML lifecycle from data collection and self-annotation to model training, evaluation, inference, GPU orchestration, deployment, and continuous optimization.
+* Developed and fine-tuned the core computer-vision stack, training five task-specific models for ball/rim detection, court keypoints, action recognition, and jersey-number OCR using self-labelled data; designed custom tracking and player-identification logic to achieve robust results.
+* Architected the complete MLOps and distributed inference pipeline, parallelizing full-match processing across GPU containers and integrating the ML backend with a production web application, database, storage, authentication, and deployment infrastructure.
+* Optimized the platform for production-scale reliability and efficiency, redesigning the inference pipeline, GPU allocation, and candidate filtering to significantly reduce compute requirements while improving the accuracy and consistency of automated scoring analysis; validated the system on real-world matches across multiple countries and shipped it as a live product.
+
+
+Data Scientist / AI Engineer — Turkish Technology (Turkish Airlines) Nov 2025 – Present · Istanbul / Hybrid · Digital Analytics & Data Intelligence
+* Design and maintain production data pipelines over large-scale Turkish Airlines event data, transforming raw, high-volume data into reliable analytical and ML-ready datasets through automated backfills, idempotent processing, schema evolution, and performance optimization.
+* Develop reusable Machine Learning and Explainable AI (XAI) workflows, combining leakage-safe feature engineering, model development and evaluation, automated feature auditing, and SHAP-based interpretation to understand the drivers behind complex customer and product behavior.
+* Conduct statistical and data-science investigations that directly inform product and engineering decisions, using hypothesis testing, stratification, sensitivity analysis, and model-based diagnostics to distinguish genuine behavioral patterns from technical, measurement, and data effects.
+* Build systematic data-quality and analytical frameworks for production environments, turning recurring validation, instrumentation, schema, and methodological checks into reproducible processes and documenting approaches so they can be consistently applied across projects and teams.
+
+
+AI Research Intern — TÜBİTAK BİLGEM, B3LAB Aug 2025 – Sep 2025 · Gebze · Cloud Computing & Big Data Research Laboratory
+* Developed a time-series and econometric analysis pipeline for TÜBİTAK BİLGEM’s Mali Zeka fiscal-intelligence program, working with large-scale U.S. federal expenditure data to study dynamic and directional relationships between government departments.
+* Applied a rigorous statistical methodology spanning stationarity testing, lag selection, Granger causality, and Vector Autoregression (VAR), including impulse-response analysis to characterize how expenditure dynamics propagate across departments and produce a framework transferable to public-sector fiscal data.
+
+AI Engineer Intern — Computer Vision | Cezeri AI & Robotics Technologies (a Baykar company) Jun 2025 – Aug 2025 · Istanbul · Visual Navigation Systems
+* Developed a real-time computer vision pipeline for an embedded gimbal system on NVIDIA Jetson Orin, integrating operator-guided segmentation, target tracking, and physical size estimation from monocular video into an end-to-end functional prototype.
+* Benchmarked and optimized segmentation models for edge deployment, evaluating lightweight SAM variants under ONNX and TensorRT to meet real-time compute constraints, and implemented contour-based geometric measurement to improve accuracy beyond conventional bounding-box estimation.
+* Conducted applied research for autonomous perception in GPS-denied environments, comparing monocular camera localization approaches against LiDAR maps. Evaluated emerging Vision-Language and World Models to inform architecture and technology decisions for future robotic platforms.
+
+AI Engineer Intern — Computer Vision | Cezeri AI & Robotics Technologies (a Baykar company) Jun 2025 – Aug 2025 · Istanbul · Visual Navigation Systems
+* Developed an end-to-end computer vision pipeline for an embedded system on NVIDIA Jetson Orin, combining real-time segmentation, tracking, and vision-based geometric estimation into a functional prototype.
+* Benchmarked and optimized segmentation models for edge deployment, evaluating lightweight vision architectures with ONNX and TensorRT under strict latency and compute constraints, and developing geometry-based methods to improve measurement robustness.
+* Contributed to applied research in autonomous perception and visual localization, evaluating modern localization approaches and emerging Vision-Language and World Models to inform architecture and technology decisions for future autonomous systems.
+
+
+Data Scientist | Seller Integral Sep 2023 – Feb 2025 · Remote · E-commerce Data & Automation
+* Worked across data collection, processing, analysis, and integration, building Python-based workflows with Pandas and NumPy and connecting data sources through web scraping, APIs, and databases.
+* Contributed to applied ML initiatives alongside data engineering work, including image classification and automated data-processing workflows for e-commerce applications.
+Data Scientist | Maestrozon Jul 2024 – Sep 2024 · E-commerce Technology
+* Developed data and automation tools for Amazon sellers, simplifying data collection, organization, and operational workflows into applications accessible to non-technical users.
+Data Scientist Intern | Schneider Electric May 2024 – Jul 2024
+* Worked on customer analytics, reporting, and process automation, applying Python and RFM analysis alongside Power BI and Power Automate to support data-driven business decisions.
+Overtech Information Technologies Inc. Feb 2022 – May 2023
+Computer Vision Engineer · Oct 2022 – May 2023
+* Worked on a TÜBİTAK-supported computer vision project, preparing and preprocessing image datasets and experimenting with CNN architectures and YOLO-based detection/classification to improve task-specific model performance.
+Junior Data Scientist · May 2022 – Oct 2022
+* Built Python-based data acquisition and processing workflows using web scraping, SQL, and Firebase, including a lightweight GUI for accessing and interacting with collected data.
+Data Science Intern · Feb 2022 – May 2022
+* Supported data analysis, web scraping, data mining, and SQL database development as an introduction to production-oriented data workflows.
+
+
+
+EDUCATION
+Istanbul Technical University (ITU) — Istanbul, Türkiye B.Sc. Artificial Intelligence and Data Engineering · Expected 2026
+Relevant Coursework: AI & ML: BLG 454E Machine Learning · YZV 212 Fundamentals of Artificial Intelligence · YZV 303E Deep Learning · YZV 405E Natural Language Processing · YZV 406E Robotics · YZV 416E Computer Vision · YZV 495E Speech & Audio Processing Data: BLG 317E Database Systems · YZV 311E Data Mining · YZV 322E Applied Data Engineering · YZV 411E Big Data Analytics · YZV 475E Data Visualization Foundations: BLG 202E Numerical Methods in Computer Engineering · BLG 311E Formal Languages & Automata · BLG 335E Analysis of Algorithms I · BLG 336E Analysis of Algorithms II · YZV 201 Data Structures · YZV 202 Optimization for Data Science · YZV 231 Probability & Statistics for Data Science
+
+
+
+
+
+PROJECTS 
+PROJECTS
+EComGen — AI Product Content Platform for E-Commerce
+Founder & Sole Developer · Full-Stack AI / Generative AI Live SaaS · Shopify & Amazon Integration · 2026
+* Built an end-to-end Generative AI SaaS for e-commerce sellers, enabling merchants to connect Shopify or Amazon stores—or work independently—and transform existing product assets into AI-generated product imagery, videos, and multilingual SEO content from a unified platform.
+* Designed the complete AI generation workflow around Google Vertex AI, integrating multimodal Gemini models for image and text generation and Veo for product video generation, alongside custom prompting, brand-aware visual generation, watermarking, product-feature overlays, and multilingual content generation.
+* Integrated the product directly with commerce platforms, implementing Shopify OAuth and Amazon SP-API workflows for catalog synchronization and enabling generated assets to be published back to product listings without leaving the platform. 
+* Built the production SaaS infrastructure end-to-end using React, TypeScript, Express, PostgreSQL/Drizzle, Firebase Authentication, Google Cloud Storage, and Railway, including background job processing, concurrency controls, transactional credit accounting, administration tooling, and Stripe-based payments. 
+* Developed a programmatic SEO system generating 5,000+ server-rendered landing pages, spanning product categories, commerce platforms, industries, use cases, guides, and glossary content across multiple languages, supported by dedicated sitemap infrastructure and structured metadata. 
+* Took the project from empty repository to a deployed, publicly accessible product, owning product design, AI integration, backend and frontend development, cloud infrastructure, database architecture, marketplace integrations, payments, SEO, and deployment as a solo developer.
+Tech: TypeScript · React · Express · PostgreSQL · Drizzle ORM · Vertex AI · Gemini · Veo · Firebase · Google Cloud Storage · Shopify API · Amazon SP-API · Stripe · Railway · Tailwind CSS
+
+
+
+
+SPOT — Automatic Basketball Video Analytics
+Founder / Sole AI Engineer · Computer Vision & MLOps Live Invite-Only Beta · Demo: 8:38
+* Built an end-to-end AI system that transforms full-length basketball footage into structured scoring events, player-level analytics, shot maps, and automatically generated highlight clips, owning the complete product from computer vision research and model development to distributed inference infrastructure and the user-facing web application.
+* Developed the complete perception stack around five task-specific models, covering ball and rim detection, court understanding, action recognition, and jersey-number OCR, with custom data collection and annotation, fine-tuning, evaluation, and task-specific post-processing rather than relying solely on off-the-shelf inference.
+* Designed custom computer-vision algorithms beyond learned models, including court homography, appearance-based team separation, roster-aware jersey identification, and a physics-constrained global trajectory solver using dynamic programming to recover ball trajectories and suppress persistent false positives.
+* Built a distributed serverless GPU inference architecture, decomposing full-match processing into parallel workloads across specialized GPU containers and combining model inference with CPU-side processing, storage, orchestration, and asynchronous job execution.
+* Iteratively optimized the system against manually labelled ground truth, replacing assumption-based performance estimates with measured evaluation and improving scoring detection while substantially reducing full-match inference cost through hardware profiling, workload placement, and candidate-ranking strategies.
+* Shipped the complete production product as a sole developer, combining the Python vision infrastructure with a Next.js/React application, authentication, row-level data security, cloud object storage, deployment infrastructure, and a workflow that turns raw match uploads into browsable analytics and clips.
+Tech: Python · PyTorch · RF-DETR · PARSeq · SAM2 · OpenCV · Modal · CUDA · Next.js · React · TypeScript · Supabase · Cloudflare R2 · Railway
+Demo: youtube.com/watch?v=W4eGxCQr0tk
+
+
+
+
+Deep Learning for Dementia — Hackathon '23
+2nd Place · TechCrew 24-Hour Hackathon · Aug 2023
+* Developed a deep-learning image classification prototype for dementia classification from brain MRI scans, working with a four-class, approximately 6,400-image dataset under a 24-hour hackathon constraint.
+* Iterated on preprocessing, architecture design, and model configuration to reach 91% classification accuracy, then wrapped the resulting model in a Gradio-based interactive application for direct image upload and inference.
+* Placed 2nd in the hackathon, demonstrating the complete prototype from model development through an accessible inference interface within the competition window.
+Tech: Python · TensorFlow · Keras · Computer Vision · Gradio
+
+
+
+
+Real-Time Object Recognition — TÜBİTAK Project
+Computer Vision & Deep Learning · 2022–2023
+* Developed and evaluated a real-time object detection pipeline across a custom 100-class image dataset, working through dataset curation, annotation, preprocessing, training, evaluation, and real-world inference.
+* Experimented with YOLOv5 and multiple CNN architectures, building on earlier classification work with VGG, ResNet, EfficientNet, and Inception-family models to transition from image-level recognition toward real-time object localization and classification.
+* Applied image preprocessing and dataset-quality techniques including histogram equalization and systematic annotation, and evaluated multiple YOLO model configurations for the accuracy/latency trade-off required by real-time inference.
+* Integrated the resulting models with PyTorch and OpenCV for live inference, achieving substantially stronger real-world recognition performance than earlier iterations of the project.
+Tech: Python · PyTorch · YOLOv5 · OpenCV · CNNs · Computer Vision · Data Annotation
+
+
+
+Image Recognition & Deep Learning — TÜBİTAK Project
+Computer Vision Research · 2022
+* Worked on the earlier image-classification stage of a 100-class computer-vision project, contributing across dataset curation, manual annotation, preprocessing, model training, and comparative experimentation.
+* Evaluated multiple deep-learning architectures including AlexNet, VGG16/19, EfficientNet, Inception/GoogLeNet, and ResNet variants, comparing their behavior and adapting training configurations to the domain.
+* Developed preprocessing workflows including histogram equalization and glare reduction, improving dataset consistency before training and establishing the foundation later used for the project's real-time YOLO-based recognition work.
+Tech: Python · TensorFlow · Keras · OpenCV · CNNs · Image Processing
+
+
+
+
+
+
+
+TECHNICAL SKILLS
+Languages & Software: Python · SQL · TypeScript/JavaScript · C++ (basic) · Git · Linux · Next.js/React · FastAPI/Express · REST APIs · ffmpeg
+Machine Learning & AI: PyTorch · TensorFlow/Keras · scikit-learn · XGBoost · SHAP/XAI · feature engineering · model evaluation & validation · hyperparameter optimization · clustering · time-series modeling · hypothesis testing
+Computer Vision: RF-DETR/DETR · YOLO · SAM 2 · PARSeq/OCR · object detection · segmentation · multi-object tracking · keypoint estimation · homography & camera geometry · OpenCV · ONNX · TensorRT · NVIDIA Jetson
+Data Engineering & Cloud: BigQuery · PostgreSQL · Supabase · DuckDB · Polars · Pandas · NumPy · Parquet · ETL/ELT · data-quality pipelines · scheduled & idempotent workflows · Docker · Modal · Railway · Cloudflare R2/S3 · Google Cloud Storage
+Generative AI & LLM Systems: Gemini · Vertex AI · multimodal AI · VLMs · prompt engineering · LLM/API integration · MCP · agentic workflows · structured generation · Veo
+
+
