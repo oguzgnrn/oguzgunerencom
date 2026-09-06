@@ -42,8 +42,8 @@ export function ExperienceCards({ text }: { text: string }) {
     const parts = heading.split(delimiter).map(part => part.trim());
     const company = parts.length > 1 ? parts[parts.length - 1] : heading;
     const title = parts.length > 1 ? parts.slice(0, -1).join(delimiter) : '';
-    const [period, ...details] = metadata.split(' · ');
-    return { title, company, period, details: details.filter(d => !d.startsWith('DEMO:')).join(' · '), body: body.join('\n') };
+    const [period] = metadata.split(' · ');
+    return { title, company, period, body: body.join('\n') };
   });
   // Keep the supplied descriptions while showing a repeated employer/role only once.
   const grouped: typeof entries = [];
@@ -59,7 +59,6 @@ export function ExperienceCards({ text }: { text: string }) {
           <h2 className="text-xl sm:text-2xl font-semibold mb-2">{entry.title || entry.company}</h2>
           <div className="text-sm sm:text-base text-black">
             {entry.title && <span className="font-medium">{entry.company}</span>}
-            {entry.details && <><span className="mx-2">•</span><span>{entry.details}</span></>}
           </div>
         </div>
         <p className="text-sm sm:text-base text-black md:text-right md:whitespace-nowrap">{entry.period}</p>
@@ -79,12 +78,12 @@ export function ProjectCards({ text }: { text: string }) {
     const demo = heading.startsWith('EComGen') ? ecomgenDemo : heading.startsWith('SPOT') ? spotDemo : undefined;
     const descriptions = lines.slice(firstBullet).filter(line => !line.startsWith('Tech:') && !line.startsWith('Demo:'));
     const tech = lines.find(line => line.startsWith('Tech:'))?.slice(5).trim().split(' · ') ?? [];
-    const dates = metadata.join(' · ').match(/(?:Aug 2023|2022–2023|2026|2022)/);
-    const details = metadata.map(line => line.replace(/(?: · )?(?:Aug 2023|2022–2023|2026|2022)$/, '').replace(/ · Demo: 8:38$/, '')).filter(Boolean);
+    const dates = metadata.join(' · ').match(/(?:May 2026 – Present|Aug 2023|2022–2023|2026|2022)/);
+    const details = metadata.map(line => line.replace(/(?: · )?(?:May 2026 – Present|Aug 2023|2022–2023|2026|2022)$/, '').replace(/ · Demo: 8:38$/, '')).filter(Boolean);
     return <article key={i} className="bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg">
       <div className="flex flex-col md:flex-row justify-between gap-3 mb-4">
         <div className="flex-1 min-w-0">
-          <h2 className="text-xl sm:text-2xl font-semibold mb-2">{heading}</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold mb-2">{heading.startsWith('SPOT') ? 'AI Engineer & Founding Partner — SPOT' : heading}</h2>
           {details.map((detail, j) => <p key={j} className="text-sm sm:text-base text-black">{detail}</p>)}
         </div>
         {dates && <p className="text-sm sm:text-base md:whitespace-nowrap">{dates[0]}</p>}
@@ -98,7 +97,34 @@ export function ProjectCards({ text }: { text: string }) {
 
 export function CvDownloads() {
   return <div className="flex flex-wrap justify-center gap-3 pt-5">
-    <a className="button" href="/cv/oguz-guneren-cv.pdf" download>Download CV · 1 page</a>
-    <a className="px-4 py-2 rounded-md border border-[#004225] text-[#004225]" href="/cv/oguz-guneren-original.txt" download>Full CV · Original text</a>
+    <a className="button" href="/cv/oguz-guneren-cv.pdf" download>Download CV</a>
   </div>;
+}
+
+export function EducationCard({ text }: { text: string }) {
+  const [universityLine, degreeLine, , ...courseLines] = text.split('\n').filter(Boolean);
+  const [university, location] = universityLine.split(' — ');
+  const [degree, graduation] = degreeLine.split(' · ');
+  return <article className="overflow-hidden rounded-xl border border-[#004225]/15 bg-[#E7E4DA]">
+    <div className="flex flex-col sm:flex-row gap-5 p-5 sm:p-8 border-b border-[#004225]/15">
+      <div aria-hidden="true" className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-[#004225] text-[#FFFDD0] font-bold text-xl tracking-wider">ITU</div>
+      <div className="flex-1">
+        <h3 className="text-xl sm:text-2xl font-semibold">{university}</h3>
+        <p className="mt-2 text-base sm:text-lg font-medium">{degree}</p>
+        <p className="mt-2 text-sm text-[#4A4A4A]">{location}</p>
+      </div>
+      <p className="self-start rounded-full bg-[#FFFDE7] px-4 py-2 text-sm font-medium text-[#004225] whitespace-nowrap">{graduation}</p>
+    </div>
+    <div className="p-5 sm:p-8">
+      <h4 className="mb-5 text-sm font-semibold uppercase tracking-widest">Relevant Coursework</h4>
+      <div className="grid gap-6 lg:grid-cols-3">{courseLines.map(line => {
+        const colon = line.indexOf(':');
+        const category = line.slice(0, colon);
+        return <div key={category} className="rounded-lg bg-[#FFFDE7]/60 p-4">
+          <h5 className="font-semibold text-base mb-3">{category}</h5>
+          <ul className="space-y-2 text-sm leading-relaxed">{line.slice(colon + 1).trim().split(' · ').map(course => <li key={course}>{course}</li>)}</ul>
+        </div>;
+      })}</div>
+    </div>
+  </article>;
 }

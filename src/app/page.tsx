@@ -1,6 +1,6 @@
 import { FaLinkedin, FaGithub, FaMedium, FaEnvelope, FaPhone } from 'react-icons/fa';
 import content from './cv-content.json';
-import { CvText, CvDownloads } from './components/CvContent';
+import { CvText, CvDownloads, EducationCard } from './components/CvContent';
 
 export default function Home() {
   return <div className="space-y-10 sm:space-y-14">
@@ -15,7 +15,7 @@ export default function Home() {
     </section>
     <section className="space-y-5">
       <h2 className="text-2xl sm:text-3xl font-bold">Education</h2>
-      <div className="bg-[#E7E4DA] p-5 sm:p-8 rounded-xl"><CvText text={content.education} /></div>
+      <EducationCard text={content.education} />
     </section>
     <section className="space-y-5">
       <h2 className="text-2xl sm:text-3xl font-bold">Technical Skills</h2>
