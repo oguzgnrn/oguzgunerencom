@@ -14,11 +14,11 @@ export default function Home() {
       <div className="bg-[#E7E4DA] p-5 sm:p-8 rounded-xl"><CvText text={content.about} /></div>
     </section>
     <section className="space-y-5">
-      <h2 className="text-2xl sm:text-3xl font-bold">EDUCATION</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold">Education</h2>
       <div className="bg-[#E7E4DA] p-5 sm:p-8 rounded-xl"><CvText text={content.education} /></div>
     </section>
     <section className="space-y-5">
-      <h2 className="text-2xl sm:text-3xl font-bold">TECHNICAL SKILLS</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold">Technical Skills</h2>
       <div className="grid gap-4 md:grid-cols-2">{content.skills.split('\n').filter(Boolean).map((line, i) => {
         const colon = line.indexOf(':');
         return <div key={i} className="bg-[#E7E4DA] p-5 sm:p-6 rounded-xl">

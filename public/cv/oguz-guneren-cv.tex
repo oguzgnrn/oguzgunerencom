@@ -1,0 +1,66 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[margin=12mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{enumitem,titlesec,hyperref}
+\hypersetup{hidelinks,pdftitle={Oğuz Güneren - Curriculum Vitae},pdfauthor={Oğuz Güneren}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\titleformat{\section}{\large\bfseries\scshape}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{5pt}
+\setlist[itemize]{leftmargin=13pt,topsep=2pt,itemsep=1pt,parsep=0pt}
+\newcommand{\entry}[3]{\textbf{#1}\hfill #2\\\textit{#3}\par}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Oğuz Güneren}\\[3pt]
+Artificial Intelligence Engineer | Data Scientist\\[3pt]
+\href{mailto:gnrnoguz@gmail.com}{gnrnoguz@gmail.com} | +90 551 126 23 26 | \href{https://www.oguzguneren.com}{oguzguneren.com}\\
+\href{https://github.com/oguzgnrn}{github.com/oguzgnrn} | \href{https://www.linkedin.com/in/oguzgnrn}{linkedin.com/in/oguzgnrn}
+\end{center}
+\section{Experience}
+\entry{SPOT}{May 2026 - Present}{AI Engineer \& Founding Partner \textperiodcentered{} Amsterdam / Remote}
+\begin{itemize}
+\item Built and shipped an end-to-end basketball video analytics platform, owning data collection, annotation, model training, evaluation, GPU orchestration and production deployment.
+\item Trained five task-specific models for ball/rim detection, court keypoints, action recognition and jersey-number OCR; developed custom tracking, player identification and trajectory reconstruction.
+\item Architected distributed GPU inference and integrated the vision backend with a production web application, authentication, database and cloud storage.
+\item Improved scoring accuracy and consistency while reducing compute requirements; validated on real matches across multiple countries and delivered automatic stats, shot maps and highlight clips.
+\end{itemize}\vspace{2pt}
+\entry{Turkish Technology (Turkish Airlines)}{Nov 2025 - Present}{Data Scientist / AI Engineer \textperiodcentered{} Istanbul / Hybrid}
+\begin{itemize}
+\item Design production pipelines over large-scale event data with automated backfills, idempotent processing, schema evolution and performance optimization to deliver reliable analytical and ML-ready datasets.
+\item Develop reusable ML and explainable AI workflows with leakage-safe feature engineering, model evaluation, automated feature auditing and SHAP-based interpretation.
+\item Apply hypothesis testing, stratification, sensitivity analysis and model-based diagnostics to distinguish behavioral patterns from measurement and data effects, informing product and engineering decisions.
+\item Build reproducible data-quality frameworks for instrumentation, schema and methodological checks; document approaches for consistent use across projects and teams.
+\end{itemize}\vspace{2pt}
+\entry{TÜBİTAK BİLGEM, B3LAB}{Aug 2025 - Sep 2025}{AI Research Intern \textperiodcentered{} Gebze}
+\begin{itemize}
+\item Developed fiscal time-series analysis using U.S. federal expenditure data, stationarity testing, Granger causality, VAR and impulse-response analysis.
+\end{itemize}\vspace{2pt}
+\entry{Cezeri AI \& Robotics Technologies (Baykar)}{Jun 2025 - Aug 2025}{AI Engineer Intern - Computer Vision \textperiodcentered{} Istanbul}
+\begin{itemize}
+\item Built real-time segmentation, tracking and geometric estimation on NVIDIA Jetson Orin; benchmarked lightweight SAM models with ONNX and TensorRT for edge deployment.
+\end{itemize}\vspace{2pt}
+\entry{Seller Integral}{Sep 2023 - Feb 2025}{Data Scientist \textperiodcentered{} Remote}
+\begin{itemize}
+\item Built Python data workflows with Pandas, NumPy, scraping, APIs and databases; contributed to image classification and e-commerce automation.
+\end{itemize}\vspace{2pt}
+\entry{Maestrozon}{Jul 2024 - Sep 2024}{Data Scientist}
+\begin{itemize}
+\item Developed data collection and automation tools for Amazon sellers, making operational workflows accessible to non-technical users.
+\end{itemize}\vspace{2pt}
+\entry{Schneider Electric}{May 2024 - Jul 2024}{Data Scientist Intern}
+\begin{itemize}
+\item Applied Python, RFM analysis, Power BI and Power Automate to customer analytics, reporting and process automation.
+\end{itemize}\vspace{2pt}
+\entry{Overtech Information Technologies Inc.}{Feb 2022 - May 2023}{Computer Vision Engineer \textperiodcentered{} Junior Data Scientist \textperiodcentered{} Data Science Intern}
+\begin{itemize}
+\item Built Python/SQL data workflows and worked on TÜBİTAK-supported vision research with custom image datasets, CNN architectures and YOLO detection/classification.
+\end{itemize}\vspace{2pt}
+\section{Education}
+\entry{Istanbul Technical University (ITU)}{Expected 2026}{B.Sc. Artificial Intelligence and Data Engineering · Istanbul, Türkiye}
+\vspace{9pt}
+\begin{center}
+For detailed experience descriptions and the full CV, visit \href{https://www.oguzguneren.com}{\textbf{oguzguneren.com}}.
+\end{center}
+\end{document}
