@@ -1,0 +1,55 @@
+{
+  "spot": [
+    {
+      "src": "/projects/spot/overview.png",
+      "width": 3006,
+      "height": 1664,
+      "caption": "Basketball video analytics",
+      "alt": "SPOT landing page showing automated basketball highlights and player detection"
+    },
+    {
+      "src": "/projects/spot/video-upload.png",
+      "width": 3016,
+      "height": 1670,
+      "caption": "Match video upload",
+      "alt": "SPOT match video upload and analysis setup"
+    },
+    {
+      "src": "/projects/spot/match-analysis.png",
+      "width": 3014,
+      "height": 1656,
+      "caption": "Match analysis & highlights",
+      "alt": "SPOT match analysis dashboard with detected scoring events and highlight clips"
+    },
+    {
+      "src": "/projects/spot/shot-map.png",
+      "width": 3010,
+      "height": 1664,
+      "caption": "Shot map & court analysis",
+      "alt": "SPOT basketball shot map and court zones"
+    },
+    {
+      "src": "/projects/spot/player-statistics.png",
+      "width": 3018,
+      "height": 1664,
+      "caption": "Player statistics",
+      "alt": "SPOT team scoring breakdown and individual player statistics"
+    }
+  ],
+  "ecomgen": [
+    {
+      "src": "/projects/ecomgen/overview.png",
+      "width": 2876,
+      "height": 1682,
+      "caption": "AI product photography",
+      "alt": "EComGen landing page comparing a source product photo with an AI generated product image"
+    },
+    {
+      "src": "/projects/ecomgen/platform.png",
+      "width": 2926,
+      "height": 1672,
+      "caption": "Content creation & store workflows",
+      "alt": "EComGen platform features for product images, video, and connected stores"
+    }
+  ]
+}

@@ -1,4 +1,6 @@
 import React from 'react';
+import ProjectGallery from './ProjectGallery';
+import projectMedia from './project-media.json';
 import DateRange from './DateRange';
 import OrganizationLogo from './OrganizationLogo';
 
@@ -101,6 +103,8 @@ export function ProjectCards({ text }: { text: string }) {
         </div>
         {dates && <p className="text-sm sm:text-base md:shrink-0"><DateRange period={dates[0]} /></p>}
       </div>
+      {heading.startsWith('SPOT') && <ProjectGallery name="SPOT" images={projectMedia.spot} />}
+      {heading.startsWith('EComGen') && <ProjectGallery name="EComGen" images={projectMedia.ecomgen} />}
       <CvText text={descriptions.join('\n')} />
       <div className="flex flex-wrap gap-2 mt-5">{tech.map(skill => <span key={skill} className="px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-xs sm:text-sm">{skill}</span>)}</div>
       <div className="mt-5 flex flex-wrap gap-5">

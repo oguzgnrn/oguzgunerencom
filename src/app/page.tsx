@@ -1,6 +1,8 @@
 import { FaLinkedin, FaGithub, FaMedium, FaEnvelope, FaPhone } from 'react-icons/fa';
 import content from './cv-content.json';
 import Link from 'next/link';
+import Image from 'next/image';
+import projectMedia from './components/project-media.json';
 import OrganizationLogo from './components/OrganizationLogo';
 import { CvText, CvDownloads, EducationCard } from './components/CvContent';
 
@@ -24,11 +26,17 @@ export default function Home() {
       <div className="flex items-end justify-between gap-4"><h2 className="text-2xl sm:text-3xl font-bold">AI products I build</h2><Link href="/projects" className="text-sm text-[#004225] underline underline-offset-4">All projects ↗</Link></div>
       <div className="grid gap-5 md:grid-cols-2">
         <article className="flex flex-col rounded-xl border border-[#004225]/15 bg-white/60 p-5 sm:p-7">
+          <Link href="/projects#spot" aria-label="View SPOT screenshots" className="mb-5 overflow-hidden rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#004225]">
+            <Image src={projectMedia.spot[0].src} width={projectMedia.spot[0].width} height={projectMedia.spot[0].height} alt={projectMedia.spot[0].alt} sizes="(max-width: 768px) 90vw, 500px" className="aspect-[16/9] w-full object-contain bg-[#080f1b]" />
+          </Link>
           <div className="flex items-center gap-4"><OrganizationLogo name="SPOT" /><div><h3 className="text-2xl">SPOT</h3><p className="mt-1 text-sm text-[#4A4A4A]">AI Engineer &amp; Founding Partner</p></div></div>
           <p className="my-5 leading-relaxed">Full basketball games become automated statistics, shot maps, and highlight clips. Five vision models, custom algorithms, and distributed GPU inference power the platform.</p>
           <div className="mt-auto flex flex-wrap gap-5 text-sm font-medium text-[#004225]"><Link className="underline underline-offset-4" href="/projects#spot">Explore SPOT ↗</Link><a className="underline underline-offset-4" href="https://youtube.com/watch?v=W4eGxCQr0tk" target="_blank" rel="noopener noreferrer">Watch demo ↗</a></div>
         </article>
         <article className="flex flex-col rounded-xl border border-[#004225]/15 bg-white/60 p-5 sm:p-7">
+          <Link href="/projects#ecomgen" aria-label="View EComGen screenshots" className="mb-5 overflow-hidden rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#004225]">
+            <Image src={projectMedia.ecomgen[0].src} width={projectMedia.ecomgen[0].width} height={projectMedia.ecomgen[0].height} alt={projectMedia.ecomgen[0].alt} sizes="(max-width: 768px) 90vw, 500px" className="aspect-[16/9] w-full object-contain bg-[#080f1b]" />
+          </Link>
           <div className="py-2"><h3 className="text-2xl">EComGen</h3><p className="mt-1 text-sm text-[#4A4A4A]">Founder · Full-Stack AI / Generative AI</p></div>
           <p className="my-5 leading-relaxed">A generative AI platform for product imagery, video, and multilingual SEO content, connecting Gemini and Veo with Shopify and Amazon workflows in a complete SaaS product.</p>
           <div className="mt-auto flex flex-wrap gap-5 text-sm font-medium text-[#004225]"><Link className="underline underline-offset-4" href="/projects#ecomgen">Explore EComGen ↗</Link><a className="underline underline-offset-4" href="https://www.youtube.com/watch?v=BnrTY1mWj_E" target="_blank" rel="noopener noreferrer">Watch demo ↗</a></div>
