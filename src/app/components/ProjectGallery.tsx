@@ -9,7 +9,13 @@ export default function ProjectGallery({ name, images }: { name: string; images:
   const [selected, setSelected] = useState(0);
   const [open, setOpen] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
+  const strip = useRef<HTMLDivElement>(null);
   const titleId = useId();
+  const stripId = useId();
+  const scrollStrip = (direction: number) => {
+    const element = strip.current;
+    if (element) element.scrollBy({ left: direction * ((element.firstElementChild?.clientWidth ?? 280) + 16), behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  };
   const current = images[selected];
   const move = (direction: number) => setSelected(index => (index + direction + images.length) % images.length);
 
@@ -23,15 +29,19 @@ export default function ProjectGallery({ name, images }: { name: string; images:
   return <section aria-label={`${name} screenshots`} className="my-6">
     <div className="mb-3 flex items-center justify-between gap-3 text-sm">
       <h3 className="font-semibold">Inside {name}</h3>
-      <span className="text-[#4A4A4A]">Click to enlarge</span>
+      <div className="flex items-center gap-2">
+        <span className="hidden sm:inline text-[#4A4A4A] mr-2">{images.length} photos · Click to enlarge</span>
+        <button type="button" aria-label={`Scroll ${name} photos left`} aria-controls={stripId} onClick={() => scrollStrip(-1)} className="h-10 w-10 rounded-full border border-[#004225]/25 hover:bg-white/60">←</button>
+        <button type="button" aria-label={`Scroll ${name} photos right`} aria-controls={stripId} onClick={() => scrollStrip(1)} className="h-10 w-10 rounded-full border border-[#004225]/25 hover:bg-white/60">→</button>
+      </div>
     </div>
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <div ref={strip} id={stripId} className="flex gap-4 overflow-x-auto overscroll-x-contain snap-x snap-mandatory px-1 pt-1 pb-3" aria-label={`${name} photo strip`}>
       {images.map((shot, index) => <button key={shot.src} type="button"
         aria-label={`Enlarge ${name}: ${shot.caption}`}
         onClick={() => { setSelected(index); dialog.current?.showModal(); setOpen(true); }}
-        className={`group overflow-hidden rounded-lg border border-[#004225]/15 bg-white text-left transition-shadow hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#004225] ${images.length > 2 && index === 0 ? 'sm:col-span-2' : ''}`}>
+        className="group w-[min(280px,80vw)] sm:w-[300px] shrink-0 snap-start overflow-hidden rounded-lg border border-[#004225]/15 bg-white text-left transition-shadow hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#004225]">
         <Image src={shot.src} width={shot.width} height={shot.height} alt={shot.alt}
-          sizes={images.length > 2 && index === 0 ? '(max-width: 768px) 95vw, 1000px' : '(max-width: 640px) 90vw, 500px'}
+          sizes="300px"
           className="aspect-[16/9] w-full object-contain bg-[#080f1b]" />
         <span className="flex items-center justify-between gap-3 px-4 py-3 text-sm font-medium text-[#004225]">{shot.caption}<span aria-hidden="true">↗</span></span>
       </button>)}
