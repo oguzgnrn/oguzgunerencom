@@ -98,7 +98,7 @@ export function ProjectCards({ text }: { text: string }) {
       <div className="flex flex-col md:flex-row justify-between gap-3 mb-4">
         {heading.startsWith('SPOT') && <OrganizationLogo name="SPOT" />}
         <div className="flex-1 min-w-0">
-          <h2 className="text-xl sm:text-2xl font-semibold mb-2">{heading.startsWith('SPOT') ? 'AI Engineer & Founding Partner — SPOT' : heading}</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold mb-2">{heading.startsWith('SPOT') ? 'SPOT — AI-Powered Basketball Video Analytics' : heading}</h2>
           {details.map((detail, j) => <p key={j} className="text-sm sm:text-base text-black">{detail}</p>)}
         </div>
         {dates && <p className="text-sm sm:text-base md:shrink-0"><DateRange period={dates[0]} /></p>}
