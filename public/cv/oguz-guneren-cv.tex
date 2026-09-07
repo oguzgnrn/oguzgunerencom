@@ -1,66 +1,191 @@
 \documentclass[a4paper,10pt]{article}
-\usepackage[margin=12mm]{geometry}
+
+\usepackage[margin=11mm]{geometry}
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
 \usepackage{enumitem,titlesec,hyperref}
-\hypersetup{hidelinks,pdftitle={Oğuz Güneren - Curriculum Vitae},pdfauthor={Oğuz Güneren}}
+
+\hypersetup{
+    hidelinks,
+    pdftitle={Oğuz Güneren - Curriculum Vitae},
+    pdfauthor={Oğuz Güneren}
+}
+
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\titleformat{\section}{\large\bfseries\scshape}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{7pt}{5pt}
-\setlist[itemize]{leftmargin=13pt,topsep=2pt,itemsep=1pt,parsep=0pt}
-\newcommand{\entry}[3]{\textbf{#1}\hfill #2\\\textit{#3}\par}
+
+\titleformat{\section}
+{\large\bfseries\scshape}
+{}{0em}{}
+[\titlerule]
+
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+
+\setlist[itemize]{
+    leftmargin=13pt,
+    topsep=1.5pt,
+    itemsep=0.5pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+\newcommand{\entry}[3]{
+    \textbf{#1}\hfill #2\\[-1pt]
+    \textit{#3}\par
+}
+
 \begin{document}
+
+% ==================== HEADER ====================
+
 \begin{center}
-{\LARGE\bfseries Oğuz Güneren}\\[3pt]
-Artificial Intelligence Engineer | Data Scientist\\[3pt]
-\href{mailto:gnrnoguz@gmail.com}{gnrnoguz@gmail.com} | +90 551 126 23 26 | \href{https://www.oguzguneren.com}{oguzguneren.com}\\
-\href{https://github.com/oguzgnrn}{github.com/oguzgnrn} | \href{https://www.linkedin.com/in/oguzgnrn}{linkedin.com/in/oguzgnrn}
+{\LARGE\bfseries Oğuz Güneren}\\[1pt]
+Artificial Intelligence Engineer | Data Scientist\\[2pt]
+\href{mailto:gnrnoguz@gmail.com}{gnrnoguz@gmail.com}
+\enspace|\enspace
++90 551 126 23 26
+\enspace|\enspace
+\href{https://www.oguzguneren.com}{oguzguneren.com}
+\enspace|\enspace
+\href{https://www.linkedin.com/in/oguzgnrn}{linkedin.com/in/oguzgnrn}
 \end{center}
+
+% ==================== EXPERIENCE ====================
+\section{About}
+\begin{center}
+{\small
+As a Data Scientist and AI Engineer with over four years of experience, I currently work at Turkish Airlines Technology across large-scale data, machine learning, and production AI systems. With a background in Artificial Intelligence and Data Engineering at Istanbul Technical University, my experience spans machine learning, computer vision, data engineering, and AI infrastructure, with a focus on building reliable systems for real-world use.
+
+\vspace{1pt}
+
+In parallel with my industry work, I co-found and build AI-focused products and startups, taking ideas from early concept to fully working products. For example, SPOT is an AI-powered basketball video analytics platform that turns raw full games into automated statistics, shot maps, and highlights; as its founding AI engineer, I built its core system end to end,  from data and model development to custom algorithms, GPU inference, and production deployment. Another example is EComGen, a generative AI platform for e-commerce that I built from the ground up, combining AI generation with a complete SaaS product.
+}
+\end{center}
+% ==================== EXPERIENCE ====================
+
 \section{Experience}
-\entry{Turkish Airlines Technology}{Nov 2025 - Present}{Data Scientist / AI Engineer \textperiodcentered{} Istanbul / Hybrid}
+
+\entry
+{Turkish Airlines Technology}
+{Nov 2025 -- Present}
+{Data Scientist / AI Engineer \textperiodcentered{} Istanbul / Hybrid}
+
 \begin{itemize}
-\item Design production pipelines over large-scale event data with automated backfills, idempotent processing, schema evolution and performance optimization to deliver reliable analytical and ML-ready datasets.
-\item Develop reusable ML and explainable AI workflows with leakage-safe feature engineering, model evaluation, automated feature auditing and SHAP-based interpretation.
-\item Apply hypothesis testing, stratification, sensitivity analysis and model-based diagnostics to distinguish behavioral patterns from measurement and data effects, informing product and engineering decisions.
-\item Build reproducible data-quality frameworks for instrumentation, schema and methodological checks; document approaches for consistent use across projects and teams.
-\end{itemize}\vspace{2pt}
-\entry{SPOT}{May 2026 - Present}{AI Engineer \& Founding Partner \textperiodcentered{} Amsterdam / Remote}
+    \item Design and maintain production data pipelines over large-scale Turkish Airlines event data, transforming raw, high-volume data into reliable analytical and ML-ready datasets.
+    \item Develop reusable Machine Learning and Explainable AI workflows, combining leakage-safe feature engineering, model development and evaluation.
+    \item Run statistical analyses that directly inform product and engineering decisions.
+    \item Build systematic data-quality and analytical frameworks for production environments, turning recurring validation, instrumentation, schema, and methodological checks into reproducible processes.
+\end{itemize}
+
+\vspace{1pt}
+
+\entry
+{SPOT}
+{May 2026 -- Present}
+{AI Engineer \& Founding Partner \textperiodcentered{} Amsterdam / Remote}
+
 \begin{itemize}
-\item Built and shipped an end-to-end basketball video analytics platform, owning data collection, annotation, model training, evaluation, GPU orchestration and production deployment.
-\item Trained five task-specific models for ball/rim detection, court keypoints, action recognition and jersey-number OCR; developed custom tracking, player identification and trajectory reconstruction.
-\item Architected distributed GPU inference and integrated the vision backend with a production web application, authentication, database and cloud storage.
-\item Improved scoring accuracy and consistency while reducing compute requirements; validated on real matches across multiple countries and delivered automatic stats, shot maps and highlight clips.
-\end{itemize}\vspace{2pt}
-\entry{TÜBİTAK BİLGEM, B3LAB}{Aug 2025 - Sep 2025}{AI Research Intern \textperiodcentered{} Gebze}
+    \item Built end-to-end video analytics platform that turns raw full basketball games into automated stats, shot maps, and highlight clips.
+    \item Trained five task-specific computer vision models for ball/rim detection, court understanding, action recognition, and jersey-OCR.
+    \item Designed a distributed GPU inference architecture and integrated it with the production web application.
+    \item Redesigned the pipeline to cut inference cost and improve accuracy, validating the system on real matches.
+\end{itemize}
+
+\vspace{1pt}
+
+\entry
+{TÜBİTAK BİLGEM, B3LAB}
+{Aug 2025 -- Sep 2025}
+{AI Research Intern  \textperiodcentered{} Gebze / On-Site}
+
 \begin{itemize}
-\item Developed fiscal time-series analysis using U.S. federal expenditure data, stationarity testing, Granger causality, VAR and impulse-response analysis.
-\end{itemize}\vspace{2pt}
-\entry{Baykar Cezeri AI \& Robotics Technologies}{Jun 2025 - Aug 2025}{AI Engineer Intern - Computer Vision \textperiodcentered{} Istanbul}
+    \item Built an econometric time-series pipeline for TÜBİTAK BİLGEM's Mali Zeka program using large-scale expenditure data.
+\end{itemize}
+
+\vspace{1pt}
+
+\entry
+{Baykar Cezeri AI \& Robotics Technologies}
+{Jun 2025 -- Aug 2025}
+{AI Engineer Intern  \textperiodcentered{} Istanbul / On-Site}
+
 \begin{itemize}
-\item Built real-time segmentation, tracking and geometric estimation on NVIDIA Jetson Orin; benchmarked lightweight SAM models with ONNX and TensorRT for edge deployment.
-\end{itemize}\vspace{2pt}
-\entry{Seller Integral}{Sep 2023 - Feb 2025}{Data Scientist \textperiodcentered{} Remote}
+    \item Built a real-time vision pipeline on NVIDIA Jetson Orin combining segmentation, tracking, and geometric estimation, while optimizing lightweight models with ONNX and TensorRT for edge deployment.
+\end{itemize}
+
+\vspace{1pt}
+
+\entry
+{Seller Integral}
+{Sep 2023 -- Feb 2025}
+{Data Scientist \textperiodcentered{} Istanbul / Remote}
+
 \begin{itemize}
-\item Built Python data workflows with Pandas, NumPy, scraping, APIs and databases; contributed to image classification and e-commerce automation.
-\end{itemize}\vspace{2pt}
-\entry{Maestrozon}{Jul 2024 - Sep 2024}{Data Scientist}
+    \item Built Python data workflows with Pandas, NumPy, web scraping, APIs, and databases, while contributing to data-quality improvements and image-classification solutions for e-commerce.
+\end{itemize}
+
+\vspace{1pt}
+
+
+\entry
+{Schneider Electric}
+{May 2024 -- Jul 2024}
+{Data Scientist \textperiodcentered{} Istanbul / Hybrid}
+
 \begin{itemize}
-\item Developed data collection and automation tools for Amazon sellers, making operational workflows accessible to non-technical users.
-\end{itemize}\vspace{2pt}
-\entry{Schneider Electric}{May 2024 - Jul 2024}{Data Scientist Intern}
+    \item Applied Python, RFM analysis, Power BI, Power Automate, and RPA to customer analytics, reporting and data visualization.
+\end{itemize}
+
+\vspace{1pt}
+\entry
+{Maestrozon}
+{Feb 2024 -- Apr 2024}
+{Data Scientist \textperiodcentered{} Istanbul / Hybrid}
+
 \begin{itemize}
-\item Applied Python, RFM analysis, Power BI and Power Automate to customer analytics, reporting and process automation.
-\end{itemize}\vspace{2pt}
-\entry{Overtech Information Technologies Inc.}{Feb 2022 - May 2023}{Computer Vision Engineer \textperiodcentered{} Junior Data Scientist \textperiodcentered{} Data Science Intern}
+    \item Developed user-friendly data collection and automation tools for Amazon sellers, simplifying e-commerce workflows for everyone.
+\end{itemize}
+
+\vspace{1pt}
+
+\entry
+{Overtech Information Technologies Inc.}
+{Feb 2022 -- May 2023}
+{Computer Vision Engineer \textperiodcentered{} Junior Data Scientist \textperiodcentered{} Data Science Intern}
+
 \begin{itemize}
-\item Built Python/SQL data workflows and worked on TÜBİTAK-supported vision research with custom image datasets, CNN architectures and YOLO detection/classification.
-\end{itemize}\vspace{2pt}
+    \item Progressed from data science to computer vision, building Python/SQL data workflows and TÜBİTAK-supported deep-learning solutions using custom datasets, CNN architectures, and YOLO.
+\end{itemize}
+
+% ==================== EDUCATION ====================
+
 \section{Education}
-\entry{Istanbul Technical University (ITU)}{Expected 2026}{B.Sc. Artificial Intelligence and Data Engineering · Istanbul, Türkiye}
-\vspace{9pt}
+
+\textbf{Istanbul Technical University (ITU)}
+\hfill
+Sep 2021 -- Expected 2026
+
+\textit{B.Sc. Artificial Intelligence and Data Engineering}
+\hfill
+Istanbul, Türkiye
+
+\vspace{1pt}
+{\small
+\textbf{Featured Coursework:} YZV 411E Big Data Analytics | YZV 405E Natural Language Processing | YZV 303E Deep Learning | YZV 416E Computer Vision | YZV 495E Speech \& Audio Processing | BLG 311E Formal Languages \& Automata | YZV 406E Robotics
+}
+\vspace{1pt}
+
+
+
+
+
+
+
 \begin{center}
-For detailed experience descriptions and the full CV, visit \href{https://www.oguzguneren.com}{\textbf{oguzguneren.com}}.
+\small
+For detailed information and more, please visit
+\href{https://www.oguzguneren.com}{\textbf{oguzguneren.com}}.
 \end{center}
+
 \end{document}
