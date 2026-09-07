@@ -105,6 +105,9 @@ export function ProjectCards({ text }: { text: string }) {
       </div>
       {heading.startsWith('SPOT') && <ProjectGallery name="SPOT" images={projectMedia.spot} />}
       {heading.startsWith('EComGen') && <ProjectGallery name="EComGen" images={projectMedia.ecomgen} />}
+      {heading.startsWith('Deep Learning for Dementia') && <ProjectGallery name="Deep Learning for Dementia" images={projectMedia.dementia} />}
+      {heading.startsWith('Real-Time Object Recognition') && <ProjectGallery name="Real-Time Object Recognition" images={projectMedia.yolo} />}
+      {heading.startsWith('Image Recognition & Deep Learning') && <ProjectGallery name="Image Recognition & Deep Learning" images={projectMedia.imageRecognition} />}
       <CvText text={descriptions.join('\n')} />
       <div className="flex flex-wrap gap-2 mt-5">{tech.map(skill => <span key={skill} className="px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-xs sm:text-sm">{skill}</span>)}</div>
       <div className="mt-5 flex flex-wrap gap-5">

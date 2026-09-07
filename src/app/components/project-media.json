@@ -1,55 +1,168 @@
 {
   "spot": [
     {
-      "src": "/projects/spot/overview.png",
-      "width": 3006,
-      "height": 1664,
-      "caption": "Basketball video analytics",
-      "alt": "SPOT landing page showing automated basketball highlights and player detection"
+      "src": "/projects/spot/01.png",
+      "width": 1914,
+      "height": 953,
+      "alt": "SPOT screenshot 1"
     },
     {
-      "src": "/projects/spot/video-upload.png",
-      "width": 3016,
-      "height": 1670,
-      "caption": "Match video upload",
-      "alt": "SPOT match video upload and analysis setup"
+      "src": "/projects/spot/02.png",
+      "width": 1670,
+      "height": 918,
+      "alt": "SPOT screenshot 2"
     },
     {
-      "src": "/projects/spot/match-analysis.png",
-      "width": 3014,
-      "height": 1656,
-      "caption": "Match analysis & highlights",
-      "alt": "SPOT match analysis dashboard with detected scoring events and highlight clips"
+      "src": "/projects/spot/03.png",
+      "width": 1904,
+      "height": 963,
+      "alt": "SPOT screenshot 3"
     },
     {
-      "src": "/projects/spot/shot-map.png",
-      "width": 3010,
-      "height": 1664,
-      "caption": "Shot map & court analysis",
-      "alt": "SPOT basketball shot map and court zones"
+      "src": "/projects/spot/04.png",
+      "width": 1911,
+      "height": 957,
+      "alt": "SPOT screenshot 4"
     },
     {
-      "src": "/projects/spot/player-statistics.png",
-      "width": 3018,
-      "height": 1664,
-      "caption": "Player statistics",
-      "alt": "SPOT team scoring breakdown and individual player statistics"
+      "src": "/projects/spot/05.png",
+      "width": 1910,
+      "height": 962,
+      "alt": "SPOT screenshot 5"
+    },
+    {
+      "src": "/projects/spot/06.png",
+      "width": 1199,
+      "height": 837,
+      "alt": "SPOT screenshot 6"
+    },
+    {
+      "src": "/projects/spot/07.png",
+      "width": 1903,
+      "height": 963,
+      "alt": "SPOT screenshot 7"
+    },
+    {
+      "src": "/projects/spot/08.png",
+      "width": 1903,
+      "height": 960,
+      "alt": "SPOT screenshot 8"
+    },
+    {
+      "src": "/projects/spot/09.png",
+      "width": 1908,
+      "height": 965,
+      "alt": "SPOT screenshot 9"
+    },
+    {
+      "src": "/projects/spot/10.png",
+      "width": 1905,
+      "height": 960,
+      "alt": "SPOT screenshot 10"
+    },
+    {
+      "src": "/projects/spot/11.png",
+      "width": 1909,
+      "height": 963,
+      "alt": "SPOT screenshot 11"
     }
   ],
   "ecomgen": [
     {
-      "src": "/projects/ecomgen/overview.png",
-      "width": 2876,
-      "height": 1682,
-      "caption": "AI product photography",
-      "alt": "EComGen landing page comparing a source product photo with an AI generated product image"
+      "src": "/projects/ecomgen/01.png",
+      "width": 1906,
+      "height": 907,
+      "alt": "EComGen screenshot 1"
     },
     {
-      "src": "/projects/ecomgen/platform.png",
-      "width": 2926,
-      "height": 1672,
-      "caption": "Content creation & store workflows",
-      "alt": "EComGen platform features for product images, video, and connected stores"
+      "src": "/projects/ecomgen/02.png",
+      "width": 1898,
+      "height": 903,
+      "alt": "EComGen screenshot 2"
+    },
+    {
+      "src": "/projects/ecomgen/03.png",
+      "width": 1908,
+      "height": 906,
+      "alt": "EComGen screenshot 3"
+    },
+    {
+      "src": "/projects/ecomgen/04.png",
+      "width": 1906,
+      "height": 904,
+      "alt": "EComGen screenshot 4"
+    },
+    {
+      "src": "/projects/ecomgen/05.png",
+      "width": 1912,
+      "height": 906,
+      "alt": "EComGen screenshot 5"
+    },
+    {
+      "src": "/projects/ecomgen/06.png",
+      "width": 1914,
+      "height": 908,
+      "alt": "EComGen screenshot 6"
+    },
+    {
+      "src": "/projects/ecomgen/07.png",
+      "width": 1907,
+      "height": 905,
+      "alt": "EComGen screenshot 7"
+    },
+    {
+      "src": "/projects/ecomgen/08.png",
+      "width": 1914,
+      "height": 904,
+      "alt": "EComGen screenshot 8"
+    }
+  ],
+  "dementia": [
+    {
+      "src": "/projects/dementia/01.png",
+      "width": 752,
+      "height": 232,
+      "alt": "Deep Learning for Dementia screenshot 1"
+    },
+    {
+      "src": "/projects/dementia/02.png",
+      "width": 808,
+      "height": 792,
+      "alt": "Deep Learning for Dementia screenshot 2"
+    }
+  ],
+  "yolo": [
+    {
+      "src": "/projects/yolo/01.png",
+      "width": 713,
+      "height": 525,
+      "alt": "Real-Time Object Recognition screenshot 1"
+    },
+    {
+      "src": "/projects/yolo/02.png",
+      "width": 717,
+      "height": 272,
+      "alt": "Real-Time Object Recognition screenshot 2"
+    },
+    {
+      "src": "/projects/yolo/03.png",
+      "width": 849,
+      "height": 639,
+      "alt": "Real-Time Object Recognition screenshot 3"
+    }
+  ],
+  "imageRecognition": [
+    {
+      "src": "/projects/imageRecognition/01.png",
+      "width": 732,
+      "height": 361,
+      "alt": "Image Recognition and Deep Learning screenshot 1"
+    },
+    {
+      "src": "/projects/imageRecognition/02.png",
+      "width": 850,
+      "height": 642,
+      "alt": "Image Recognition and Deep Learning screenshot 2"
     }
   ]
 }

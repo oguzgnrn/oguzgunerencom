@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useEffect, useId, useRef, useState } from 'react';
 
-type Screenshot = { src: string; width: number; height: number; caption: string; alt: string };
+type Screenshot = { src: string; width: number; height: number; alt: string };
 
 export default function ProjectGallery({ name, images }: { name: string; images: Screenshot[] }) {
   const [selected, setSelected] = useState(0);
@@ -21,7 +21,7 @@ export default function ProjectGallery({ name, images }: { name: string; images:
     return () => { document.body.style.overflow = previous; };
   }, [open]);
 
-  return <section aria-label={`${name} screenshots`} className="my-5 w-full max-w-[260px]">
+  return <section aria-label={`${name} screenshots`} className="my-5 w-full max-w-[230px]">
     <button id={imageId} type="button" aria-label={`Enlarge ${name} screenshot ${selected + 1}`}
       onClick={() => {
         if (touchStart.current === -1) { touchStart.current = null; return; }
@@ -36,8 +36,8 @@ export default function ProjectGallery({ name, images }: { name: string; images:
       }}
       onTouchCancel={() => { touchStart.current = null; }}
       className="block w-full overflow-hidden rounded-lg border border-[#004225]/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#004225]">
-      <Image src={current.src} width={current.width} height={current.height} alt={current.alt}
-        sizes="260px" className="aspect-[16/9] w-full object-contain bg-[#080f1b]" />
+      <Image key={current.src} src={current.src} width={current.width} height={current.height} alt={current.alt}
+        sizes="230px" className="aspect-[16/9] w-full object-contain bg-[#080f1b]" />
     </button>
     <div className="mt-2 flex items-center justify-between text-xs text-[#004225]">
       <button type="button" aria-label={`Previous ${name} photo`} aria-controls={imageId} onClick={() => move(-1)} className="h-9 w-9 rounded-full border border-[#004225]/25 hover:bg-white/60">←</button>
