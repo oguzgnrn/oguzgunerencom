@@ -13,7 +13,7 @@ const assets: Record<string, string> = {
 export default function OrganizationLogo({ name }: { name: string }) {
   const asset = assets[name];
   if (!asset) return null;
-  return <div className={`flex h-16 sm:h-20 shrink-0 items-center justify-center rounded-xl border border-[#004225]/10 p-2 shadow-sm ${asset === 'baykar.svg' ? 'w-24 sm:w-28 bg-[#152b45]' : 'w-16 sm:w-20 bg-white'}`}>
+  return <div className={`flex h-16 w-16 sm:h-20 sm:w-20 shrink-0 items-center justify-center rounded-xl border border-[#004225]/10 shadow-sm ${asset === 'baykar.svg' ? 'bg-[#152b45] p-1.5' : 'bg-white p-2'}`}>
     <Image src={`/logos/${asset}`} alt={`${name} logo`} width={80} height={80} unoptimized className="h-full w-full object-contain" />
   </div>;
 }

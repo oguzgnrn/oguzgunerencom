@@ -21,23 +21,23 @@ export default function Home() {
     <section className="space-y-5">
       <div className="flex items-end justify-between gap-4"><h2 className="text-2xl sm:text-3xl font-bold">AI products I build</h2><Link href="/projects" className="text-sm text-[#004225] underline underline-offset-4">All projects ↗</Link></div>
       <div className="grid gap-5 md:grid-cols-2">
-        <article className="flex flex-col rounded-xl border border-[#004225]/15 bg-white/60 p-5 sm:p-7">
+        <article className="flex flex-col rounded-xl border border-[#004225]/15 border-t-4 border-t-[#004225] bg-[#E7E4DA] p-5 sm:p-7">
           <div><h3 className="text-2xl">SPOT</h3><p className="mt-1 text-sm text-[#4A4A4A]">AI Engineer &amp; Founding Partner</p></div>
           <p className="my-5 leading-relaxed">Full basketball games become automated statistics, shot maps, and highlight clips. Five vision models, custom algorithms, and distributed GPU inference power the platform.</p>
-          <div className="mt-auto flex flex-wrap gap-5 text-sm font-medium text-[#004225]"><Link className="underline underline-offset-4" href="/projects#spot">See SPOT ↗</Link><a className="underline underline-offset-4" href="https://youtube.com/watch?v=W4eGxCQr0tk" target="_blank" rel="noopener noreferrer">Watch demo ↗</a></div>
+          <div className="mt-auto flex flex-wrap gap-5 text-sm font-medium text-[#004225]"><Link className="underline underline-offset-4" href="/projects#spot">Details ↗</Link><a className="underline underline-offset-4" href="https://youtube.com/watch?v=W4eGxCQr0tk" target="_blank" rel="noopener noreferrer">Watch demo ↗</a></div>
         </article>
-        <article className="flex flex-col rounded-xl border border-[#004225]/15 bg-white/60 p-5 sm:p-7">
+        <article className="flex flex-col rounded-xl border border-[#004225]/15 border-t-4 border-t-[#004225] bg-[#E7E4DA] p-5 sm:p-7">
           <div className="py-2"><h3 className="text-2xl">EComGen</h3><p className="mt-1 text-sm text-[#4A4A4A]">Founder · Full-Stack AI / Generative AI</p></div>
           <p className="my-5 leading-relaxed">A generative AI platform for product imagery, video, and multilingual SEO content, connecting Gemini and Veo with Shopify and Amazon workflows in a complete SaaS product.</p>
-          <div className="mt-auto flex flex-wrap gap-5 text-sm font-medium text-[#004225]"><Link className="underline underline-offset-4" href="/projects#ecomgen">See EComGen ↗</Link><a className="underline underline-offset-4" href="https://www.youtube.com/watch?v=BnrTY1mWj_E" target="_blank" rel="noopener noreferrer">Watch demo ↗</a></div>
+          <div className="mt-auto flex flex-wrap gap-5 text-sm font-medium text-[#004225]"><Link className="underline underline-offset-4" href="/projects#ecomgen">Details ↗</Link><a className="underline underline-offset-4" href="https://www.youtube.com/watch?v=BnrTY1mWj_E" target="_blank" rel="noopener noreferrer">Watch demo ↗</a></div>
         </article>
       </div>
     </section>
     <section className="space-y-5">
       <h2 className="text-2xl sm:text-3xl font-bold">Technical Skills</h2>
-      <div className="grid gap-4 md:grid-cols-2">{content.skills.split('\n').filter(Boolean).map((line, i) => {
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">{content.skills.split('\n').filter(Boolean).map((line, i) => {
         const colon = line.indexOf(':');
-        return <div key={i} className="bg-[#E7E4DA] p-5 sm:p-6 rounded-xl">
+        return <div key={i} className="h-full rounded-xl border border-[#004225]/10 bg-[#E7E4DA] p-5 sm:p-6">
           <h3 className="text-lg font-semibold mb-3">{line.slice(0, colon)}:</h3>
           <p className="text-sm sm:text-base leading-relaxed">{line.slice(colon + 1)}</p>
         </div>;
