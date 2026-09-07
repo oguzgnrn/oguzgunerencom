@@ -36,7 +36,7 @@ const spotDemo = 'https://youtube.com/watch?v=W4eGxCQr0tk';
 const ecomgenDemo = 'https://www.youtube.com/watch?v=BnrTY1mWj_E';
 
 function DemoLink({ href }: { href: string }) {
-  return <a href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-[#004225] underline underline-offset-4">Watch demo <span aria-hidden="true">↗</span></a>;
+  return <a href={href} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-[#004225] underline underline-offset-4">Watch demo <span aria-hidden="true">↗</span></a>;
 }
 
 export function ExperienceCards({ text }: { text: string }) {
@@ -112,7 +112,7 @@ export function ProjectCards({ text }: { text: string }) {
       <div className="flex flex-wrap gap-2 mt-5">{tech.map(skill => <span key={skill} className="px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-xs sm:text-sm">{skill}</span>)}</div>
       <div className="mt-5 flex flex-wrap gap-5">
         {demo && <DemoLink href={demo} />}
-        {github && <a href={github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-[#004225] underline underline-offset-4">View on GitHub <span aria-hidden="true">↗</span></a>}
+        {github && <a href={github} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-[#004225] underline underline-offset-4">View on GitHub <span aria-hidden="true">↗</span></a>}
       </div>
     </article>;
   })}</div>;
@@ -120,7 +120,7 @@ export function ProjectCards({ text }: { text: string }) {
 
 export function CvDownloads() {
   return <div className="flex flex-wrap justify-center gap-3 pt-5">
-    <a className="button" href="/cv/oguz-guneren-cv.pdf" download>Download CV</a>
+    <a className="button inline-flex min-h-[44px] items-center" href="/cv/oguz-guneren-cv.pdf" download>Download CV</a>
   </div>;
 }
 

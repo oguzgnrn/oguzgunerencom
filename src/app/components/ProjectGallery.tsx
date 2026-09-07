@@ -27,8 +27,8 @@ export default function ProjectGallery({ name, images }: { name: string; images:
 
   return <section aria-label={`${name} screenshots`} className="my-5 w-full">
     <div className="mb-2 flex items-center justify-end gap-2">
-      <button type="button" aria-label={`Scroll ${name} photos left`} aria-controls={stripId} onClick={() => scrollStrip(-1)} className="h-9 w-9 rounded-full border border-[#004225]/25 hover:bg-white/60">←</button>
-      <button type="button" aria-label={`Scroll ${name} photos right`} aria-controls={stripId} onClick={() => scrollStrip(1)} className="h-9 w-9 rounded-full border border-[#004225]/25 hover:bg-white/60">→</button>
+      <button type="button" aria-label={`Scroll ${name} photos left`} aria-controls={stripId} onClick={() => scrollStrip(-1)} className="h-11 w-11 rounded-full border border-[#004225]/25 hover:bg-white/60">←</button>
+      <button type="button" aria-label={`Scroll ${name} photos right`} aria-controls={stripId} onClick={() => scrollStrip(1)} className="h-11 w-11 rounded-full border border-[#004225]/25 hover:bg-white/60">→</button>
     </div>
     <div ref={strip} id={stripId} className="flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-3" aria-label={`${name} photo strip`}>
       {images.map((shot, index) => <button key={shot.src} type="button" aria-label={`Enlarge ${name} screenshot ${index + 1}`}
@@ -46,13 +46,13 @@ export default function ProjectGallery({ name, images }: { name: string; images:
       className="m-auto w-[96vw] max-w-[1440px] max-h-[94dvh] rounded-xl bg-[#FFFDE7] p-0 text-[#004225] shadow-2xl backdrop:bg-black/80">
       {open && <div className="p-3 sm:p-5">
         <div className="mb-3 flex items-center justify-end gap-3">
-          <button type="button" autoFocus onClick={() => dialog.current?.close()} className="shrink-0 rounded-lg border border-[#004225]/25 px-4 py-2 text-sm hover:bg-[#E7E4DA]">Close</button>
+          <button type="button" autoFocus onClick={() => dialog.current?.close()} className="min-h-[44px] shrink-0 rounded-lg border border-[#004225]/25 px-4 text-sm hover:bg-[#E7E4DA]">Close</button>
         </div>
         <Image src={current.src} width={current.width} height={current.height} alt={current.alt} sizes="96vw" className="max-h-[72dvh] w-full object-contain bg-[#080f1b]" />
         <div className="mt-3 flex items-center justify-between gap-3 text-sm">
-          <button type="button" aria-label="Previous screenshot" onClick={() => move(-1)} className="rounded-lg border border-[#004225]/25 px-4 py-2 hover:bg-[#E7E4DA]">← Previous</button>
+          <button type="button" aria-label="Previous screenshot" onClick={() => move(-1)} className="min-h-[44px] rounded-lg border border-[#004225]/25 px-3 hover:bg-[#E7E4DA] sm:px-4">← Previous</button>
           <span aria-live="polite">{selected + 1} / {images.length}</span>
-          <button type="button" aria-label="Next screenshot" onClick={() => move(1)} className="rounded-lg border border-[#004225]/25 px-4 py-2 hover:bg-[#E7E4DA]">Next →</button>
+          <button type="button" aria-label="Next screenshot" onClick={() => move(1)} className="min-h-[44px] rounded-lg border border-[#004225]/25 px-3 hover:bg-[#E7E4DA] sm:px-4">Next →</button>
         </div>
       </div>}
     </dialog>

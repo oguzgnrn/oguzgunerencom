@@ -19,17 +19,17 @@ export default function Home() {
       <EducationCard text={content.education} gpa={content.educationGpa} />
     </section>
     <section className="space-y-5">
-      <div className="flex items-end justify-between gap-4"><h2 className="text-2xl sm:text-3xl font-bold">AI products I build</h2><Link href="/projects" className="text-sm text-[#004225] underline underline-offset-4">All projects ↗</Link></div>
+      <div className="flex items-end justify-between gap-4"><h2 className="text-2xl sm:text-3xl font-bold">AI products I build</h2><Link href="/projects" className="inline-flex min-h-[44px] shrink-0 items-center text-sm text-[#004225] underline underline-offset-4">All projects ↗</Link></div>
       <div className="grid gap-5 md:grid-cols-2">
         <article className="flex flex-col rounded-xl border border-[#004225]/15 border-t-4 border-t-[#004225] bg-[#E7E4DA] p-5 sm:p-7">
           <div><h3 className="text-2xl">SPOT</h3><p className="mt-1 text-sm text-[#4A4A4A]">AI Engineer &amp; Founding Partner</p></div>
           <p className="my-5 leading-relaxed">Full basketball games become automated statistics, shot maps, and highlight clips. Five vision models, custom algorithms, and distributed GPU inference power the platform.</p>
-          <div className="mt-auto flex flex-wrap gap-5 text-sm font-medium text-[#004225]"><Link className="underline underline-offset-4" href="/projects#spot">Details ↗</Link><a className="underline underline-offset-4" href="https://youtube.com/watch?v=W4eGxCQr0tk" target="_blank" rel="noopener noreferrer">Watch demo ↗</a></div>
+          <div className="mt-auto flex flex-wrap gap-x-5 text-sm font-medium text-[#004225]"><Link className="inline-flex min-h-[44px] items-center underline underline-offset-4" href="/projects#spot">Details ↗</Link><a className="inline-flex min-h-[44px] items-center underline underline-offset-4" href="https://youtube.com/watch?v=W4eGxCQr0tk" target="_blank" rel="noopener noreferrer">Watch demo ↗</a></div>
         </article>
         <article className="flex flex-col rounded-xl border border-[#004225]/15 border-t-4 border-t-[#004225] bg-[#E7E4DA] p-5 sm:p-7">
           <div className="py-2"><h3 className="text-2xl">EComGen</h3><p className="mt-1 text-sm text-[#4A4A4A]">Founder · Full-Stack AI / Generative AI</p></div>
           <p className="my-5 leading-relaxed">A generative AI platform for product imagery, video, and multilingual SEO content, connecting Gemini and Veo with Shopify and Amazon workflows in a complete SaaS product.</p>
-          <div className="mt-auto flex flex-wrap gap-5 text-sm font-medium text-[#004225]"><Link className="underline underline-offset-4" href="/projects#ecomgen">Details ↗</Link><a className="underline underline-offset-4" href="https://www.youtube.com/watch?v=BnrTY1mWj_E" target="_blank" rel="noopener noreferrer">Watch demo ↗</a></div>
+          <div className="mt-auto flex flex-wrap gap-x-5 text-sm font-medium text-[#004225]"><Link className="inline-flex min-h-[44px] items-center underline underline-offset-4" href="/projects#ecomgen">Details ↗</Link><a className="inline-flex min-h-[44px] items-center underline underline-offset-4" href="https://www.youtube.com/watch?v=BnrTY1mWj_E" target="_blank" rel="noopener noreferrer">Watch demo ↗</a></div>
         </article>
       </div>
     </section>
@@ -51,7 +51,7 @@ export default function Home() {
             <div className="space-y-3 sm:space-y-4">
               <div className="flex items-center gap-2 sm:gap-3">
                 <FaEnvelope className="text-[#004225] text-lg sm:text-xl flex-shrink-0" />
-                <a href="mailto:gnrnoguz@gmail.com" className="text-sm sm:text-base text-black hover:text-[#004225] break-all">
+                <a href="mailto:gnrnoguz@gmail.com" className="inline-flex min-h-[44px] items-center break-all text-sm text-black hover:text-[#004225] sm:text-base">
                   gnrnoguz@gmail.com
                 </a>
               </div>
@@ -60,12 +60,12 @@ export default function Home() {
                 <span className="text-sm sm:text-base text-black">+90 551 126 23 26</span>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4">
+            <div className="flex flex-col gap-2 sm:flex-row sm:gap-3 md:flex-col md:gap-3 lg:flex-row lg:gap-4">
               <a
                 href="https://github.com/oguzgnrn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button text-sm sm:text-base px-4 sm:px-6 py-2 flex items-center justify-center"
+                className="button flex min-h-[44px] flex-1 items-center justify-center px-4 text-sm sm:px-6 sm:text-base"
               >
                 <FaGithub className="mr-2" /> GitHub
               </a>
@@ -73,7 +73,7 @@ export default function Home() {
                 href="https://medium.com/@gnrnoguz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button text-sm sm:text-base px-4 sm:px-6 py-2 flex items-center justify-center"
+                className="button flex min-h-[44px] flex-1 items-center justify-center px-4 text-sm sm:px-6 sm:text-base"
               >
                 <FaMedium className="mr-2" /> Medium
               </a>
@@ -81,7 +81,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/oguzgnrn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button text-sm sm:text-base px-4 sm:px-6 py-2 flex items-center justify-center"
+                className="button flex min-h-[44px] flex-1 items-center justify-center px-4 text-sm sm:px-6 sm:text-base"
               >
                 <FaLinkedin className="mr-2" /> LinkedIn
               </a>

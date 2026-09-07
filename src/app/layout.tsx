@@ -1,7 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import MobileNav from './components/MobileNav'
 
@@ -10,7 +10,12 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Oguz Guneren - Data Scientist & AI Engineer',
   description: 'Personal website of Oguz Guneren, showcasing projects and experience in Data Science and AI Engineering',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({
@@ -20,15 +25,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-      </head>
       <body className={inter.className}>
         <nav className="sticky top-0 z-50 bg-[#013220] backdrop-blur-sm border-b border-neutral-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
-                <Link href="/" className="text-base sm:text-lg font-semibold text-[#FFFDD0]">
+                <Link href="/" className="inline-flex min-h-[44px] items-center text-base font-semibold text-[#FFFDD0] sm:text-lg">
                   Oğuz Güneren
                 </Link>
               </div>
