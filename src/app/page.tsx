@@ -10,9 +10,10 @@ export default function Home() {
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">{content.name}</h1>
       <p className="text-lg sm:text-2xl mt-4">{content.title}</p>
       <CvDownloads />
-      <div className="mt-6 flex justify-center gap-6 text-sm font-medium text-[#004225]">
+      <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-medium text-[#004225]">
         <Link href="/experience" className="underline underline-offset-4">Explore experience</Link>
         <Link href="/projects" className="underline underline-offset-4">Explore projects</Link>
+        <a href="https://medium.com/@gnrnoguz" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Read my articles ↗</a>
       </div>
     </section>
     <section className="space-y-5">

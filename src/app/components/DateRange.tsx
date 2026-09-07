@@ -13,5 +13,5 @@ export default function DateRange({ period }: { period: string }) {
     return () => { window.clearInterval(timer); document.removeEventListener('visibilitychange', refresh); };
   }, []);
   const duration = calculateDuration(period, month);
-  return <span>{period}{duration && <span className="text-[#4A4A4A]"> · {duration}</span>}</span>;
+  return <span className="inline-flex flex-wrap items-baseline gap-x-1 md:flex-nowrap"><span className="whitespace-nowrap">{period}</span>{duration && <span className="whitespace-nowrap text-[#4A4A4A]">· {duration}</span>}</span>;
 }

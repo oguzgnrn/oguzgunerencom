@@ -65,7 +65,7 @@ export function ExperienceCards({ text }: { text: string }) {
             {entry.title && <span className="font-medium">{entry.company}</span>}
           </div></div>
         </div>
-        <p className="text-sm sm:text-base text-black md:text-right md:max-w-[220px]"><DateRange period={entry.period} /></p>
+        <p className="text-sm sm:text-base text-black md:text-right md:shrink-0"><DateRange period={entry.period} /></p>
       </div>
       <CvText text={entry.body} />
       {entry.company === 'SPOT' && <div className="mt-5"><DemoLink href={spotDemo} /></div>}
@@ -82,8 +82,16 @@ export function ProjectCards({ text }: { text: string }) {
     const demo = heading.startsWith('EComGen') ? ecomgenDemo : heading.startsWith('SPOT') ? spotDemo : undefined;
     const descriptions = lines.slice(firstBullet).filter(line => !line.startsWith('Tech:') && !line.startsWith('Demo:'));
     const tech = lines.find(line => line.startsWith('Tech:'))?.slice(5).trim().split(' · ') ?? [];
-    const dates = metadata.join(' · ').match(/(?:May 2026 – Present|2025–2026|Aug 2023|2022–2023|2026|2022)/);
-    const details = metadata.map(line => line.replace(/(?: · )?(?:May 2026 – Present|2025–2026|Aug 2023|2022–2023|2026|2022)$/, '').replace(/ · Demo: 8:38$/, '')).filter(Boolean);
+    const datePattern = /(?:[A-Z][a-z]{2} \d{4} [–-] (?:[A-Z][a-z]{2} \d{4}|Present)|2025–2026|Aug 2023|2022–2023|2026|2022)/;
+    const dates = metadata.join(' · ').match(datePattern);
+    const details = metadata.map(line => line.replace(datePattern, '').replace(/ · $/, '').trim()).filter(Boolean);
+    const github = heading.startsWith('Deep Learning for Dementia')
+      ? 'https://github.com/oguzgnrn/HackathonProject-DeepLearningForDementia'
+      : heading.startsWith('Real-Time Object Recognition')
+      ? 'https://github.com/oguzgnrn/RealLifeProject-YOLOv5'
+      : heading.startsWith('Image Recognition & Deep Learning')
+      ? 'https://github.com/oguzgnrn/DomainSpecific-ImageRecognition'
+      : undefined;
     return <article id={heading.startsWith('SPOT') ? 'spot' : heading.startsWith('EComGen') ? 'ecomgen' : undefined} key={i} className="scroll-mt-24 bg-[#E7E4DA] p-4 sm:p-5 md:p-6 rounded-lg">
       <div className="flex flex-col md:flex-row justify-between gap-3 mb-4">
         {heading.startsWith('SPOT') && <OrganizationLogo name="SPOT" />}
@@ -91,11 +99,14 @@ export function ProjectCards({ text }: { text: string }) {
           <h2 className="text-xl sm:text-2xl font-semibold mb-2">{heading.startsWith('SPOT') ? 'AI Engineer & Founding Partner — SPOT' : heading}</h2>
           {details.map((detail, j) => <p key={j} className="text-sm sm:text-base text-black">{detail}</p>)}
         </div>
-        {dates && <p className="text-sm sm:text-base md:max-w-[220px]"><DateRange period={dates[0]} /></p>}
+        {dates && <p className="text-sm sm:text-base md:shrink-0"><DateRange period={dates[0]} /></p>}
       </div>
       <CvText text={descriptions.join('\n')} />
       <div className="flex flex-wrap gap-2 mt-5">{tech.map(skill => <span key={skill} className="px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-xs sm:text-sm">{skill}</span>)}</div>
-      {demo && <div className="mt-5"><DemoLink href={demo} /></div>}
+      <div className="mt-5 flex flex-wrap gap-5">
+        {demo && <DemoLink href={demo} />}
+        {github && <a href={github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-[#004225] underline underline-offset-4">View on GitHub <span aria-hidden="true">↗</span></a>}
+      </div>
     </article>;
   })}</div>;
 }
