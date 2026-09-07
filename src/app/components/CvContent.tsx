@@ -135,7 +135,7 @@ export function EducationCard({ text, gpa }: { text: string; gpa: string }) {
         <h3 className="text-xl sm:text-2xl font-semibold">{university}</h3>
         <p className="mt-2 text-base sm:text-lg font-medium">{degree}</p>
         <p className="mt-2 text-sm text-[#4A4A4A]">{location}</p>
-        <p className="mt-3 inline-block rounded-md bg-white/70 px-3 py-1 text-sm font-medium text-[#004225]">GPA: {gpa}</p>
+        <p className="mt-3 inline-block rounded-md border border-[#004225]/10 bg-[#FFFDE7] px-3 py-1 text-sm font-medium text-[#004225]">GPA: {gpa}</p>
       </div>
       <p className="self-start rounded-full bg-[#FFFDE7] px-4 py-2 text-sm font-medium text-[#004225] sm:max-w-[210px]">{graduation}</p>
     </div>
