@@ -1,7 +1,6 @@
 import { FaLinkedin, FaGithub, FaMedium, FaEnvelope, FaPhone } from 'react-icons/fa';
 import content from './cv-content.json';
 import Link from 'next/link';
-import OrganizationLogo from './components/OrganizationLogo';
 import { CvText, CvDownloads, EducationCard } from './components/CvContent';
 
 export default function Home() {
@@ -23,7 +22,7 @@ export default function Home() {
       <div className="flex items-end justify-between gap-4"><h2 className="text-2xl sm:text-3xl font-bold">AI products I build</h2><Link href="/projects" className="text-sm text-[#004225] underline underline-offset-4">All projects ↗</Link></div>
       <div className="grid gap-5 md:grid-cols-2">
         <article className="flex flex-col rounded-xl border border-[#004225]/15 bg-white/60 p-5 sm:p-7">
-          <div className="flex items-center gap-4"><OrganizationLogo name="SPOT" /><div><h3 className="text-2xl">SPOT</h3><p className="mt-1 text-sm text-[#4A4A4A]">AI Engineer &amp; Founding Partner</p></div></div>
+          <div><h3 className="text-2xl">SPOT</h3><p className="mt-1 text-sm text-[#4A4A4A]">AI Engineer &amp; Founding Partner</p></div>
           <p className="my-5 leading-relaxed">Full basketball games become automated statistics, shot maps, and highlight clips. Five vision models, custom algorithms, and distributed GPU inference power the platform.</p>
           <div className="mt-auto flex flex-wrap gap-5 text-sm font-medium text-[#004225]"><Link className="underline underline-offset-4" href="/projects#spot">See SPOT ↗</Link><a className="underline underline-offset-4" href="https://youtube.com/watch?v=W4eGxCQr0tk" target="_blank" rel="noopener noreferrer">Watch demo ↗</a></div>
         </article>

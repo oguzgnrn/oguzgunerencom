@@ -9,10 +9,14 @@ export default function ProjectGallery({ name, images }: { name: string; images:
   const [selected, setSelected] = useState(0);
   const [open, setOpen] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
-  const touchStart = useRef<number | null>(null);
-  const imageId = useId();
+  const strip = useRef<HTMLDivElement>(null);
+  const stripId = useId();
   const current = images[selected];
   const move = (direction: number) => setSelected(index => (index + direction + images.length) % images.length);
+  const scrollStrip = (direction: number) => {
+    const element = strip.current;
+    if (element) element.scrollBy({ left: direction * 246, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  };
 
   useEffect(() => {
     if (!open) return;
@@ -21,28 +25,17 @@ export default function ProjectGallery({ name, images }: { name: string; images:
     return () => { document.body.style.overflow = previous; };
   }, [open]);
 
-  return <section aria-label={`${name} screenshots`} className="my-5 w-full max-w-[230px]">
-    <button id={imageId} type="button" aria-label={`Enlarge ${name} screenshot ${selected + 1}`}
-      onClick={() => {
-        if (touchStart.current === -1) { touchStart.current = null; return; }
-        dialog.current?.showModal(); setOpen(true);
-      }}
-      onTouchStart={event => { touchStart.current = event.touches[0].clientX; }}
-      onTouchEnd={event => {
-        if (touchStart.current === null) return;
-        const distance = event.changedTouches[0].clientX - touchStart.current;
-        if (Math.abs(distance) > 35) { move(distance < 0 ? 1 : -1); touchStart.current = -1; }
-        else touchStart.current = null;
-      }}
-      onTouchCancel={() => { touchStart.current = null; }}
-      className="block w-full overflow-hidden rounded-lg border border-[#004225]/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#004225]">
-      <Image key={current.src} src={current.src} width={current.width} height={current.height} alt={current.alt}
-        sizes="230px" className="aspect-[16/9] w-full object-contain bg-[#080f1b]" />
-    </button>
-    <div className="mt-2 flex items-center justify-between text-xs text-[#004225]">
-      <button type="button" aria-label={`Previous ${name} photo`} aria-controls={imageId} onClick={() => move(-1)} className="h-9 w-9 rounded-full border border-[#004225]/25 hover:bg-white/60">←</button>
-      <span aria-live="polite">{selected + 1} / {images.length}</span>
-      <button type="button" aria-label={`Next ${name} photo`} aria-controls={imageId} onClick={() => move(1)} className="h-9 w-9 rounded-full border border-[#004225]/25 hover:bg-white/60">→</button>
+  return <section aria-label={`${name} screenshots`} className="my-5 w-full">
+    <div className="mb-2 flex items-center justify-end gap-2">
+      <button type="button" aria-label={`Scroll ${name} photos left`} aria-controls={stripId} onClick={() => scrollStrip(-1)} className="h-9 w-9 rounded-full border border-[#004225]/25 hover:bg-white/60">←</button>
+      <button type="button" aria-label={`Scroll ${name} photos right`} aria-controls={stripId} onClick={() => scrollStrip(1)} className="h-9 w-9 rounded-full border border-[#004225]/25 hover:bg-white/60">→</button>
+    </div>
+    <div ref={strip} id={stripId} className="flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-3" aria-label={`${name} photo strip`}>
+      {images.map((shot, index) => <button key={shot.src} type="button" aria-label={`Enlarge ${name} screenshot ${index + 1}`}
+        onClick={() => { setSelected(index); dialog.current?.showModal(); setOpen(true); }}
+        className="w-[230px] shrink-0 snap-start overflow-hidden rounded-lg border border-[#004225]/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#004225]">
+        <Image src={shot.src} width={shot.width} height={shot.height} alt={shot.alt} sizes="230px" className="aspect-[16/9] w-full object-contain bg-[#080f1b]" />
+      </button>)}
     </div>
     <dialog ref={dialog} aria-label={`${name} screenshot viewer`} onClose={() => setOpen(false)}
       onClick={event => { if (event.target === event.currentTarget) dialog.current?.close(); }}
