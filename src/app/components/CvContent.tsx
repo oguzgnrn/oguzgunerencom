@@ -34,6 +34,12 @@ export function CvText({ text }: { text: string }) {
 
 const spotDemo = 'https://youtube.com/watch?v=W4eGxCQr0tk';
 const ecomgenDemo = 'https://www.youtube.com/watch?v=BnrTY1mWj_E';
+const spotSite = 'https://www.spotvisionai.com';
+const ecomgenSite = 'https://ecomgen.penfai.com';
+
+function WebsiteLink({ href }: { href: string }) {
+  return <a href={href} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-[#004225] underline underline-offset-4">Visit website <span aria-hidden="true">↗</span></a>;
+}
 
 function DemoLink({ href }: { href: string }) {
   return <a href={href} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-[#004225] underline underline-offset-4">Watch demo <span aria-hidden="true">↗</span></a>;
@@ -70,7 +76,7 @@ export function ExperienceCards({ text }: { text: string }) {
         <p className="text-sm sm:text-base text-black md:text-right md:shrink-0"><DateRange period={entry.period} /></p>
       </div>
       <CvText text={entry.body} />
-      {entry.company === 'SPOT' && <div className="mt-5"><DemoLink href={spotDemo} /></div>}
+      {entry.company === 'SPOT' && <div className="mt-5 flex flex-wrap gap-5"><WebsiteLink href={spotSite} /><DemoLink href={spotDemo} /></div>}
     </article>
   )}</div>;
 }
@@ -82,6 +88,7 @@ export function ProjectCards({ text }: { text: string }) {
     const firstBullet = lines.findIndex(line => line.startsWith('* '));
     const metadata = lines.slice(0, firstBullet);
     const demo = heading.startsWith('EComGen') ? ecomgenDemo : heading.startsWith('SPOT') ? spotDemo : undefined;
+    const site = heading.startsWith('EComGen') ? ecomgenSite : heading.startsWith('SPOT') ? spotSite : undefined;
     const descriptions = lines.slice(firstBullet).filter(line => !line.startsWith('Tech:') && !line.startsWith('Demo:'));
     const tech = lines.find(line => line.startsWith('Tech:'))?.slice(5).trim().split(' · ') ?? [];
     const datePattern = /(?:[A-Z][a-z]{2} \d{4} [–-] (?:[A-Z][a-z]{2} \d{4}|Present)|2025–2026|Aug 2023|2022–2023|2026|2022)/;
@@ -111,6 +118,7 @@ export function ProjectCards({ text }: { text: string }) {
       <CvText text={descriptions.join('\n')} />
       <div className="flex flex-wrap gap-2 mt-5">{tech.map(skill => <span key={skill} className="px-3 py-1 bg-[#FFFDE7] text-[#004225] rounded-full text-xs sm:text-sm">{skill}</span>)}</div>
       <div className="mt-5 flex flex-wrap gap-5">
+        {site && <WebsiteLink href={site} />}
         {demo && <DemoLink href={demo} />}
         {github && <a href={github} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-[#004225] underline underline-offset-4">View on GitHub <span aria-hidden="true">↗</span></a>}
       </div>
